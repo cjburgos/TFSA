@@ -5,10 +5,6 @@ import ellipse5 from "../../assets/pageSpecific/ConversionRate/img/ellipse-5.svg
 import image1 from "../../assets/pageSpecific/ConversionRate/img/image-1.png";
 import image2 from "../../assets/pageSpecific/ConversionRate/img/image-2.png";
 import image3 from "../../assets/pageSpecific/ConversionRate/img/image-3.png";
-// import image from "../../assets/pageSpecific/ConversionRate/img/image.svg"; // missing
-import iphone16ProBlackTitaniumPortrait from "../../assets/pageSpecific/iphone-16-pro-black-titanium-portrait.png";
-// import line12 from "../../assets/pageSpecific/ConversionRate/img/line-1-2.svg"; // missing
-// import line1 from "../../assets/pageSpecific/ConversionRate/img/line-1.svg"; // missing
 import line2 from "../../assets/pageSpecific/ConversionRate/img/line-2.svg";
 import "./conversionRate.css";
 
@@ -17,23 +13,10 @@ function ConversionRate () {
         <div className="box">
             <div className="conversion-rate">
                 <div className="overlap">
-                    <div className="phone">
-                        <div className="conversion-rates">
-                            <div className="overlap-group">
-                                <div className="home-indicator">
-                                    <div className="div" />
-                                </div>
-                                <div className="bezel">
-                                    <img className="iphone-pro-black" alt="Iphone pro black" src={iphone16ProBlackTitaniumPortrait} />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div className="rate-container">
                         <div className="exchange-background">
                             <div className="exchange-coin">
                                 <div className="overlap-2">
-                                    <img className="line" alt="Line" src={line12} />
                                     <div className="exchange-coin-2" />
                                     <div className="swipe-continer">
                                         <div className="rectangle-wrapper">
@@ -59,7 +42,6 @@ function ConversionRate () {
                             </div>
                             <div className="overlap-wrapper">
                                 <div className="overlap-2">
-                                    <img className="line" alt="Line" src={image} />
                                     <div className="exchange-coin-2" />
                                     <div className="overlap-group-wrapper">
                                         <div className="div-wrapper">
@@ -86,7 +68,6 @@ function ConversionRate () {
                             </div>
                             <div className="exchange-coin-3">
                                 <div className="overlap-2">
-                                    <img className="line" alt="Line" src={line1} />
                                     <div className="exchange-coin-2" />
                                     <div className="swipe-continer-2">
                                         <div className="overlap-group-2">
