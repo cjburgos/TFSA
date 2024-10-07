@@ -1,0 +1,152 @@
+.box {
+    height: 874px;
+    width: 402px;
+}
+
+.box .end-ride {
+    height: 874px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 402px;
+}
+
+.box .overlap {
+    height: 874px;
+    position: relative;
+}
+
+.box .phone {
+    height: 874px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 402px;
+}
+
+.box .overlap-group-wrapper {
+    height: 874px;
+}
+
+.box .overlap-group {
+    background-color: #000000;
+    border-radius: 50px;
+    height: 884px;
+    position: relative;
+    width: 402px;
+}
+
+.box .home-indicator-instance {
+    left: 0 !important;
+    position: absolute !important;
+    top: 853px !important;
+    width: 402px !important;
+}
+
+.box .design-component-instance-node {
+    left: 131px !important;
+}
+
+.box .bezel {
+    height: 873px !important;
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+}
+
+.box .iphone-16-pro {
+    height: 920px !important;
+    left: -24px !important;
+    top: -23px !important;
+    width: 450px !important;
+}
+
+.box .coin-group {
+    height: 112px;
+    left: 57px;
+    position: absolute;
+    top: 333px;
+    width: 289px;
+}
+
+.box .coin-slot {
+    height: 112px;
+}
+
+.box .slot {
+    height: 112px;
+    position: relative;
+    width: 289px;
+}
+
+.box .rectangle {
+    background-color: #d9d9d9;
+    border-radius: 25px;
+    box-shadow: inset 0px 4px 4px #00000040;
+    height: 32px;
+    left: 0;
+    position: absolute;
+    top: 81px;
+    width: 288px;
+}
+
+.box .rectangle-2 {
+    background-color: #000000;
+    height: 81px;
+    left: 23px;
+    position: absolute;
+    top: 0;
+    width: 266px;
+}
+
+.box .token-amount {
+    height: 110px;
+    left: 146px;
+    position: absolute;
+    top: 498px;
+    width: 112px;
+}
+
+.box .overlap-2 {
+    border-radius: 10px;
+    height: 110px;
+    position: relative;
+    width: 110px;
+}
+
+.box .rectangle-3 {
+    background-color: #a3a3a3;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #00000040;
+    height: 99px;
+    left: 5px;
+    position: absolute;
+    top: 5px;
+    width: 99px;
+}
+
+.box .rectangle-4 {
+    background-color: #000000d1;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #00000040;
+    height: 110px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 110px;
+}
+
+.box .text-wrapper {
+    color: #ffffff;
+    font-family: "Acme-Regular", Helvetica, serif;
+    font-size: 30px;
+    font-weight: 400;
+    height: 47px;
+    left: 40px;
+    letter-spacing: -0.43px;
+    line-height: 22px;
+    position: absolute;
+    text-shadow: 0px 4px 4px #00000040;
+    top: 31px;
+    width: 29px;
+}
