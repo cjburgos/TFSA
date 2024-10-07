@@ -33,7 +33,7 @@ function ConversionRate () {
                         <div className="exchange-background">
                             <div className="exchange-coin">
                                 <div className="overlap-2">
-                                    <img className="line" alt="Line" src={line12} />
+                                    {/* <img className="line" alt="Line" src={line12} /> */}
                                     <div className="exchange-coin-2" />
                                     <div className="swipe-continer">
                                         <div className="rectangle-wrapper">
@@ -59,7 +59,7 @@ function ConversionRate () {
                             </div>
                             <div className="overlap-wrapper">
                                 <div className="overlap-2">
-                                    <img className="line" alt="Line" src={image} />
+                                    {/* <img className="line" alt="Line" src={image} /> */}
                                     <div className="exchange-coin-2" />
                                     <div className="overlap-group-wrapper">
                                         <div className="div-wrapper">
@@ -86,7 +86,7 @@ function ConversionRate () {
                             </div>
                             <div className="exchange-coin-3">
                                 <div className="overlap-2">
-                                    <img className="line" alt="Line" src={line1} />
+                                    {/* <img className="line" alt="Line" src={line1} /> */}
                                     <div className="exchange-coin-2" />
                                     <div className="swipe-continer-2">
                                         <div className="overlap-group-2">
