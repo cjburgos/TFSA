@@ -1,18 +1,18 @@
 
-import TFSACoin from "./TFSA-coin.svg";
-import ellipse2 from "./ellipse-2.svg";
-import ellipse5 from "./ellipse-5.svg";
-import image1 from "./image-1.png";
-import image2 from "./image-2.png";
-import image3 from "./image-3.png";
-import image from "./image.svg";
-import iphone16ProBlackTitaniumPortrait from "./iphone-16-pro-black-titanium-portrait.png";
-import line12 from "./line-1-2.svg";
-import line1 from "./line-1.svg";
-import line2 from "./line-2.svg";
-import "./style.css";
+import TFSACoin from "../../assets/coins/tfsa-coin.svg";
+import ellipse2 from "../../assets/pageSpecific/ConversionRate/img/ellipse-2.svg";
+import ellipse5 from "../../assets/pageSpecific/ellipse-5.svg";
+import image1 from "../../assets/pageSpecific/image-1.png";
+import image2 from "../../assets/pageSpecific/image-2.png";
+import image3 from "../../assets/pageSpecific/image-3.png";
+import image from "../../assets/pageSpecific/image.svg";
+import iphone16ProBlackTitaniumPortrait from "../../assets/pageSpecific/iphone-16-pro-black-titanium-portrait.png";
+import line12 from "../../assets/pageSpecific/line-1-2.svg";
+import line1 from "../../assets/pageSpecific/line-1.svg";
+import line2 from "../../assets/pageSpecific/line-2.svg";
+import "./conversionRate.css";
 
-export const Box = () => {
+function ConversionRate () {
     return (
         <div className="box">
             <div className="conversion-rate">
@@ -135,3 +135,6 @@ export const Box = () => {
         </div>
     );
 };
+
+
+export { ConversionRate };
