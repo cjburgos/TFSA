@@ -1,6 +1,4 @@
 
-import { HomeIndicator } from "./HomeIndicator";
-import { IphonePro } from "./IphonePro";
 import "./style.css";
 
 export const Box = () => {
@@ -8,24 +6,6 @@ export const Box = () => {
         <div className="box">
             <div className="end-ride">
                 <div className="overlap">
-                    <div className="phone">
-                        <div className="overlap-group-wrapper">
-                            <div className="overlap-group">
-                                <HomeIndicator
-                                    className="home-indicator-instance"
-                                    device="i-phone"
-                                    homeIndicatorClassName="design-component-instance-node"
-                                    orientation="portrait"
-                                />
-                                <IphonePro
-                                    className="bezel"
-                                    color="black-titanium"
-                                    iphoneProBlack="image.png"
-                                    iphoneProBlackClassName="iphone-16-pro"
-                                />
-                            </div>
-                        </div>
-                    </div>
                     <div className="coin-group">
                         <div className="coin-slot">
                             <div className="slot">
