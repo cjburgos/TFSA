@@ -5,46 +5,27 @@ import "./convert.css";
 
 function Convert() {
     return (
-        <div className="box">
-            <div className="convert">
-                <div className="overlap">
-                    <div className="confirm-deny">
-                        <button className={"cancel-button"}>Confirm</button>
-                        <button className={"confirm-button"}>Confirm</button>
-                    </div>
-                    <div className="exchange-coin"/>
-                    <div className="sign-info">
-                        <div className="overlap-2">
-                            <div className="exchange-coin-2" />
-                            <p className="confirmation-text">Exchange 1 Metro Token for 1.04 MUNI Token?</p>
-                        </div>
-                        <div className="conversion-rate" />
-                    </div>
-                    <div className="exchange-focus">
-                        <div className="left-coin">
-                            <img className="image" alt="Image" src={TRAXCoin}/>
-                        </div>
-                        <div className={"right_coin"}>
-                            <img className="image" alt="Image" src={MetroCoin}/>
-                        </div>
-                        <div className="left-box">
-                        <div className="overlap-5">
-                            <div className="rectangle" />
-                            <div className="rectangle-2" />
-                            <div className="left-amount">1</div>
-                        </div>
-                    </div>
-                    <div className="right-box">
-                        <div className="overlap-6">
-                            <div className="rectangle" />
-                            <div className="rectangle-3" />
-                            <div className="right-amount">1.04</div>
-                        </div>
-                    </div>
-                </div>
+       <div className={"convert-box"}>
+        <div className={"tokens"}>
+            <div className={"token-left"}>
+                <img src={TRAXCoin} alt={"TRAX"} className={"token"}/>
+            </div>
+            <div className={"token-right"}>
+                <img src={MetroCoin} alt={"Metro"} className={"token"}/>
             </div>
         </div>
-        </div>
+           <div className={"confirmation-box"}>
+               <div className={"confirmation"}>
+                   <div className={"confirmation-text"}>
+                       <p>Are you sure you want to convert?</p>
+                   </div>
+               </div>
+               <div className={"confirmation-buttons"}>
+                   <button className={"yes"}>Yes</button>
+                   <button className={"no"}>No</button>
+               </div>
+           </div>
+       </div>
     );
 };
 
