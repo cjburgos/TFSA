@@ -1,12 +1,10 @@
 import React from "react";
-import {ConversionRate} from "../pages/conversion_rate/ConversionRate.jsx";
+import { ConversionRate } from "../pages/conversion_rate/ConversionRate.jsx";
 
-function AppHome () {
+export default function AppHome () {
     return (
         <div>
             <ConversionRate/>
         </div>
         );
 }
-
-export default AppHome ;
