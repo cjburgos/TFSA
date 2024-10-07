@@ -1,7 +1,7 @@
 
 import "./style.css";
 
-export const Box = () => {
+export const RideComplete = () => {
     return (
         <div className="box">
             <div className="end-ride">
