@@ -16,13 +16,7 @@
     position: relative;
 }
 
-.box .phone {
-    height: 874px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 402px;
-}
+
 
 .box .overlap-group-wrapper {
     height: 874px;
@@ -217,7 +211,7 @@
     left: 252px;
     position: absolute;
     top: 0;
-    width: 9px;
+    width: 15px;
 }
 
 .box .rectangle-8 {
