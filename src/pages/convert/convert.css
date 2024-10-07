@@ -355,3 +355,9 @@
     white-space: nowrap;
     width: 57px;
 }
+
+.left-coin, .right_name {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Optional: centers items horizontally */
+}

@@ -1,41 +1,18 @@
 
-import { ArrowRight } from "./ArrowRight";
-import { HomeIndicator } from "./HomeIndicator";
-import { IphonePro } from "./IphonePro";
-import cancelButton from "./pageSpecific/Convert/img/cancel-button.png";
-import confirmButton from "./pageSpecific/Convert/img/confirm-button.png";
-import image1 from "./pageSpecific/Convert/img/image-1.png";``
-import image2 from "./pageSpecific/Convert/img/image-2.png";
-import "./style.css";
+import TRAXCoin from "../../assets/coins/TRAXCoin.svg";
+import MetroCoin from "../../assets/coins/MetroCoin.svg";
+import "./convert.css";
 
 function Convert() {
     return (
         <div className="box">
             <div className="convert">
                 <div className="overlap">
-                    <div className="phone">
-                        <div className="overlap-group-wrapper">
-                            <div className="overlap-group">
-                                <HomeIndicator
-                                    className="home-indicator-instance"
-                                    device="i-phone"
-                                    homeIndicatorClassName="design-component-instance-node"
-                                    orientation="portrait"
-                                />
-                                <IphonePro
-                                    className="bezel"
-                                    color="black-titanium"
-                                    iphoneProBlack="image.png"
-                                    iphoneProBlackClassName="iphone-16-pro"
-                                />
-                            </div>
-                        </div>
-                    </div>
                     <div className="confirm-deny">
-                        <img className="cancel-button" alt="Cancel button" src={cancelButton} />
-                        <img className="confirm-button" alt="Confirm button" src={confirmButton} />
+                        <button className={"cancel-button"}>Confirm</button>
+                        <button className={"confirm-button"}>Confirm</button>
                     </div>
-                    <div className="exchange-coin" />
+                    <div className="exchange-coin"/>
                     <div className="sign-info">
                         <div className="overlap-2">
                             <div className="exchange-coin-2" />
@@ -44,31 +21,13 @@ function Convert() {
                         <div className="conversion-rate" />
                     </div>
                     <div className="exchange-focus">
-                        <div className="metro-coin">
-                            <div className="overlap-3">
-                                <div className="div-wrapper">
-                                    <div className="ellipse-wrapper">
-                                        <div className="ellipse" />
-                                    </div>
-                                </div>
-                                <img className="image" alt="Image" src={image1} />
-                            </div>
+                        <div className="left-coin">
+                            <img className="image" alt="Image" src={TRAXCoin}/>
                         </div>
-                        <div className="overlap-4">
-                            <ArrowRight className="arrow-right" color="#FEF7FF" />
-                            <div className="muni-coin">
-                                <div className="overlap-3">
-                                    <div className="div-wrapper">
-                                        <div className="overlap-group-2">
-                                            <div className="ellipse-2" />
-                                        </div>
-                                    </div>
-                                    <img className="img" alt="Image" src={image2} />
-                                </div>
-                            </div>
+                        <div className={"right_name"}>
+                            <img className="image" alt="Image" src={MetroCoin}/>
                         </div>
-                    </div>
-                    <div className="left-box">
+                        <div className="left-box">
                         <div className="overlap-5">
                             <div className="rectangle" />
                             <div className="rectangle-2" />
@@ -84,6 +43,7 @@ function Convert() {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 };
