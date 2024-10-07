@@ -1,7 +1,7 @@
 
 import { HomeIndicator } from "./HomeIndicator";
 import { IphonePro } from "./IphonePro";
-import image1 from "./image-1.png";
+import image1 from "../../assets/pageSpecific/RideInProgress/img/image-1.svg"; 
 import "./style.css";
 
 export const Box = () => {
