@@ -1,6 +1,3 @@
-
-import { HomeIndicator } from "./HomeIndicator";
-import { IphonePro } from "./IphonePro";
 import image1 from "./image-1.png";
 import "./style.css";
 
@@ -9,24 +6,6 @@ function RideStart() {
         <div className="box">
             <div className="start-ride">
                 <div className="overlap">
-                    <div className="phone">
-                        <div className="overlap-group-wrapper">
-                            <div className="overlap-group">
-                                <HomeIndicator
-                                    className="home-indicator-instance"
-                                    device="i-phone"
-                                    homeIndicatorClassName="design-component-instance-node"
-                                    orientation="portrait"
-                                />
-                                <IphonePro
-                                    className="bezel"
-                                    color="black-titanium"
-                                    iphoneProBlack="image.png"
-                                    iphoneProBlackClassName="iphone-16-pro"
-                                />
-                            </div>
-                        </div>
-                    </div>
                     <div className="coin-group">
                         <div className="overlap-2">
                             <div className="coin-slot">
