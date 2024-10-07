@@ -1,5 +1,5 @@
 import image1 from "./image-1.png";
-import "./style.css";
+import "./rideStart.css";
 
 function RideStart() {
     return (
