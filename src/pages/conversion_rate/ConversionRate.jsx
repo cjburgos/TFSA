@@ -6,7 +6,7 @@ import image1 from "../../assets/pageSpecific/ConversionRate/img/image-1.png";
 import image2 from "../../assets/pageSpecific/ConversionRate/img/image-2.png";
 import image3 from "../../assets/pageSpecific/ConversionRate/img/image-3.png";
 // import image from "../../assets/pageSpecific/ConversionRate/img/image.svg"; // missing
-// import iphone16ProBlackTitaniumPortrait from "../../assets/pageSpecific/iphone-16-pro-black-titanium-portrait.png";
+import iphone16ProBlackTitaniumPortrait from "../../assets/pageSpecific/iphone-16-pro-black-titanium-portrait.png";
 // import line12 from "../../assets/pageSpecific/ConversionRate/img/line-1-2.svg"; // missing
 // import line1 from "../../assets/pageSpecific/ConversionRate/img/line-1.svg"; // missing
 import line2 from "../../assets/pageSpecific/ConversionRate/img/line-2.svg";
