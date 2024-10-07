@@ -1,4 +1,4 @@
-import MetroToken from "../../assets/coins/metroCoin.svg";
+import MetroToken from "../../assets/coins/MetroCoin.svg";
 import "./rideStart.css";
 
 function RideStart() {
@@ -7,6 +7,7 @@ function RideStart() {
             <div className="start-ride">
                 <div className="overlap">
                     <div className="coin-group">
+                        <div className="overlap-2">
                             <div className="coin-slot">
                                 <div className="slot">
                                     <div className="overlap-3">
@@ -23,6 +24,7 @@ function RideStart() {
                                         </div>
                                         <div className="rectangle-2" />
                                     </div>
+                                </div>
                             </div>
                             <div className="fast">
                                 <div className="rectangle-3" />
