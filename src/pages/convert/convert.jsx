@@ -24,7 +24,7 @@ function Convert() {
                         <div className="left-coin">
                             <img className="image" alt="Image" src={TRAXCoin}/>
                         </div>
-                        <div className={"right_name"}>
+                        <div className={"right_coin"}>
                             <img className="image" alt="Image" src={MetroCoin}/>
                         </div>
                         <div className="left-box">
