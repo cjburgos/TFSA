@@ -1,8 +1,15 @@
-# React + Vite
+# TFSA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- The README should include:
 
-Currently, two official plugins are available:
+1) a clear short one-sentence description of your submission.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2) a short description of what you integrated Rootstock with and how.
+
+3) a short description of the team and their backgrounds.
+
+4) clear instructions for testing the integration.
+
+5) feedback describing your experience with building on Rootstock.
+
+6) optionally, a short video demo or slide deck.
