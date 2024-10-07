@@ -2,10 +2,10 @@
 import { ArrowRight } from "./ArrowRight";
 import { HomeIndicator } from "./HomeIndicator";
 import { IphonePro } from "./IphonePro";
-import cancelButton from "./cancel-button.png";
-import confirmButton from "./confirm-button.png";
-import image1 from "./image-1.png";
-import image2 from "./image-2.png";
+import cancelButton from "./pageSpecific/Convert/img/cancel-button.png";
+import confirmButton from "./pageSpecific/Convert/img/confirm-button.png";
+import image1 from "./pageSpecific/Convert/img/image-1.png";``
+import image2 from "./pageSpecific/Convert/img/image-2.png";
 import "./style.css";
 
 export const Box = () => {
