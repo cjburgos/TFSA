@@ -1,11 +1,8 @@
 
 import TFSACoin from "../../assets/coins/TFSACoin.svg";
-import ellipse2 from "../../assets/pageSpecific/ConversionRate/img/ellipse-2.svg";
-import ellipse5 from "../../assets/pageSpecific/ConversionRate/img/ellipse-5.svg";
-import image1 from "../../assets/pageSpecific/ConversionRate/img/image-1.png";
-import image2 from "../../assets/pageSpecific/ConversionRate/img/image-2.png";
-import image3 from "../../assets/pageSpecific/ConversionRate/img/image-3.png";
-import line2 from "../../assets/pageSpecific/ConversionRate/img/line-2.svg";
+import TRAXCoin from "../../assets/coins/TRAXCoin.svg";
+import MetroCoin from "../../assets/coins/MetroCoin.svg";
+import MuniCoin from "../../assets/coins/MuniCoin.svg";
 import "./conversionRate.css";
 
 function ConversionRate () {
@@ -31,11 +28,7 @@ function ConversionRate () {
                                     </div>
                                     <div className="MTA-coin">
                                         <div className="overlap-4">
-                                            <div className="ellipse" />
-                                            <div className="ellipse-2" />
-                                            <img className="image" alt="Image" src={image3} />
-                                            <img className="img" alt="Ellipse" src={ellipse2} />
-                                            <img className="ellipse-3" alt="Ellipse" src={ellipse5} />
+                                            <img className="image" alt="Image" src={TRAXCoin} />
                                         </div>
                                     </div>
                                 </div>
@@ -54,16 +47,7 @@ function ConversionRate () {
                                             <div className="rate-2">0.84</div>
                                         </div>
                                     </div>
-                                    <div className="muni-coin">
-                                        <div className="overlap-5">
-                                            <div className="metro-coin">
-                                                <div className="ellipse-wrapper">
-                                                    <div className="ellipse-4" />
-                                                </div>
-                                            </div>
-                                            <img className="image-2" alt="Image" src={image2} />
-                                        </div>
-                                    </div>
+                                    <img className="img" alt="Ellipse" src={MetroCoin}/>
                                 </div>
                             </div>
                             <div className="exchange-coin-3">
@@ -71,10 +55,11 @@ function ConversionRate () {
                                     <div className="exchange-coin-2" />
                                     <div className="swipe-continer-2">
                                         <div className="overlap-group-2">
-                                            <div className="rectangle-3" />
-                                            <div className="rectangle-4" />
-                                            <div className="swipe-background" />
+                                            <div className="rectangle-3"/>
+                                            <div className="rectangle-4"/>
+                                            <div className="swipe-background"/>
                                         </div>
+                                        <img className="ellipse-3" alt="Ellipse" src={MuniCoin}/>
                                     </div>
                                     <div className="rate">
                                         <div className="overlap-3">
@@ -82,19 +67,8 @@ function ConversionRate () {
                                             <div className="text-wrapper-2">1.24</div>
                                         </div>
                                     </div>
-                                    <div className="metro-coin-2">
-                                        <div className="overlap-5">
-                                            <div className="metro-coin">
-                                                <div className="overlap-group-3">
-                                                    <div className="ellipse-5" />
-                                                </div>
-                                            </div>
-                                            <img className="image-3" alt="Image" src={image1} />
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
-                            <img className="line-2" alt="Line" src={line2} />
                         </div>
                     </div>
                     <div className="title">
