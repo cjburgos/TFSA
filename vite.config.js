@@ -10,8 +10,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
       manifest: {
-        name: 'Vite PWA Project',
-        short_name: 'Vite PWA Project',
+        name: 'Transportation Flexible Spending Account',
+        short_name: 'TFSA',
         theme_color: '#ffffff',
         icons: [
           {
