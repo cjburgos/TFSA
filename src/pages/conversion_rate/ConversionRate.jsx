@@ -1,5 +1,5 @@
 
-import TFSACoin from "../../assets/coins/tfsa-coin.svg";
+import TFSACoin from "../../assets/coins/TFSACoin.svg";
 import ellipse2 from "../../assets/pageSpecific/ConversionRate/img/ellipse-2.svg";
 import ellipse5 from "../../assets/pageSpecific/ConversionRate/img/ellipse-5.svg";
 import image1 from "../../assets/pageSpecific/ConversionRate/img/image-1.png";
