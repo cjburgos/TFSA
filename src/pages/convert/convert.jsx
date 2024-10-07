@@ -8,7 +8,7 @@ import image1 from "./pageSpecific/Convert/img/image-1.png";``
 import image2 from "./pageSpecific/Convert/img/image-2.png";
 import "./style.css";
 
-export const Box = () => {
+function Convert() {
     return (
         <div className="box">
             <div className="convert">
@@ -87,3 +87,5 @@ export const Box = () => {
         </div>
     );
 };
+
+export {Convert}

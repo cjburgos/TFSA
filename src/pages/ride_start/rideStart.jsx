@@ -4,7 +4,7 @@ import { IphonePro } from "./IphonePro";
 import image1 from "./image-1.png";
 import "./style.css";
 
-export const Box = () => {
+function RideStart() {
     return (
         <div className="box">
             <div className="start-ride">
@@ -62,3 +62,6 @@ export const Box = () => {
         </div>
     );
 };
+
+
+export {RideStart}

@@ -1,7 +1,7 @@
 
 import "./style.css";
 
-export const RideComplete = () => {
+function RideComplete () {
     return (
         <div className="box">
             <div className="end-ride">
@@ -26,3 +26,5 @@ export const RideComplete = () => {
         </div>
     );
 };
+
+export { RideComplete }
