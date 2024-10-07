@@ -1,12 +1,12 @@
 .box {
     height: 874px;
     width: 402px;
+    background-color: black;
 }
 
 .box .start-ride {
     height: 874px;
     left: 0;
-    position: fixed;
     top: 0;
     width: 402px;
 }
@@ -55,22 +55,6 @@
     width: 139px;
 }
 
-.box .bezel {
-    height: 873px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 402px;
-}
-
-.box .iphone-pro-black {
-    height: 920px;
-    left: -24px;
-    object-fit: cover;
-    position: absolute;
-    top: -23px;
-    width: 450px;
-}
 
 .box .coin-group {
     height: 422px;
@@ -80,10 +64,6 @@
     width: 289px;
 }
 
-.box .overlap-2 {
-    height: 422px;
-    position: relative;
-}
 
 .box .coin-slot {
     height: 206px;
