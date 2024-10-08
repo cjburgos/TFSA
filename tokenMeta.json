@@ -1,0 +1,26 @@
+{
+"MetroToken": {
+  "img": "./src/assets/coins/Metro.svg",
+    "longName": "WMATA Metro Token",
+    "shortName": "Metro",
+  "conversionValue": 1.25
+},
+  "MTAToken": {
+    "img": "./src/assets/coins/MTA.svg",
+        "longName": "MTA Token",
+        "shortName": "MTA",
+    "conversionValue": 0.76
+  },
+"TRAXToken" : {
+    "img": "./src/assets/coins/TRAX.svg",
+        "longName": "TRAX Token",
+        "shortName": "TRAX",
+    "conversionValue": 0.5
+    },
+"TFSA" : {
+  "img": "./src/assets/coins/TFSA.svg",
+      "longName": "Transportation Flexible Spending Account",
+      "shortName": "TFSA",
+    "conversionValue": 1.0
+}
+}
