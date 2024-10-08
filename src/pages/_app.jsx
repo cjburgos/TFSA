@@ -1,7 +1,7 @@
 import { Authenticator } from '@aws-amplify/ui-react';
 import { Amplify } from 'aws-amplify';
-import AppHome from '../home/AppHome.jsx';
 import outputs from '../../amplify_outputs.json';
+// import AppHome from '../home/AppHome.jsx';
 import '@aws-amplify/ui-react/styles.css';
 import '../App.css';
 
