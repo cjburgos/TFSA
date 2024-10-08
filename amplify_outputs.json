@@ -1,12 +1,14 @@
 {
   "auth": {
-    "user_pool_id": "us-east-1_ejnHIpGBR",
+    "user_pool_id": "us-east-1_lB8Us5BTU",
     "aws_region": "us-east-1",
-    "user_pool_client_id": "3dkjqke9tpjho7bmr1ddf8lq28",
-    "identity_pool_id": "us-east-1:83d38799-15ab-4444-8d12-07d6510c04e4",
+    "user_pool_client_id": "61or07kbd4cvu1hdspajmm7uft",
+    "identity_pool_id": "us-east-1:1dd5e5e3-9d35-4c0d-884e-d94621a3f8b0",
     "mfa_methods": [],
     "standard_required_attributes": [
-      "email"
+      "email",
+      "given_name",
+      "family_name"
     ],
     "username_attributes": [
       "email"
@@ -25,7 +27,7 @@
     "unauthenticated_identities_enabled": true
   },
   "data": {
-    "url": "https://bkxu24sdyrfztalljiyybhrto4.appsync-api.us-east-1.amazonaws.com/graphql",
+    "url": "https://hwthydwnwbe3rdv3d5aq2jl3vq.appsync-api.us-east-1.amazonaws.com/graphql",
     "aws_region": "us-east-1",
     "default_authorization_type": "AWS_IAM",
     "authorization_types": [
@@ -360,6 +362,78 @@
                   "id"
                 ]
               }
+            },
+            {
+              "type": "auth",
+              "properties": {
+                "rules": [
+                  {
+                    "allow": "public",
+                    "provider": "iam",
+                    "operations": [
+                      "create",
+                      "update",
+                      "delete",
+                      "read"
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "primaryKeyInfo": {
+            "isCustomPrimaryKey": false,
+            "primaryKeyFieldName": "id",
+            "sortKeyFieldNames": []
+          }
+        },
+        "tokenTransaction": {
+          "name": "tokenTransaction",
+          "fields": {
+            "id": {
+              "name": "id",
+              "isArray": false,
+              "type": "ID",
+              "isRequired": true,
+              "attributes": []
+            },
+            "token": {
+              "name": "token",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "amount": {
+              "name": "amount",
+              "isArray": false,
+              "type": "Float",
+              "isRequired": false,
+              "attributes": []
+            },
+            "createdAt": {
+              "name": "createdAt",
+              "isArray": false,
+              "type": "AWSDateTime",
+              "isRequired": false,
+              "attributes": [],
+              "isReadOnly": true
+            },
+            "updatedAt": {
+              "name": "updatedAt",
+              "isArray": false,
+              "type": "AWSDateTime",
+              "isRequired": false,
+              "attributes": [],
+              "isReadOnly": true
+            }
+          },
+          "syncable": true,
+          "pluralName": "tokenTransactions",
+          "attributes": [
+            {
+              "type": "model",
+              "properties": {}
             },
             {
               "type": "auth",

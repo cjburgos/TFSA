@@ -15,7 +15,7 @@ export const NavBar = () => {
     }
 
     return (
-    <View>
+    <View className="navBar">
         <Menu>
             <MenuItem onClick={() => handleButtonClick('/')}> Home </MenuItem>
             <MenuItem onClick={() => handleButtonClick('/conversion_rates')}> Convert </MenuItem>

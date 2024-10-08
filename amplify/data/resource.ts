@@ -8,11 +8,6 @@ and "delete" any "Todo" records.
 =========================================================================*/
 
 const schema = a.schema({
-  // Todo: a
-  //   .model({
-  //     content: a.string(),
-  //   })
-  //   .authorization((allow) => [allow.guest()]),
   User: a
   .model({
     id: a.id(),
@@ -42,6 +37,11 @@ const schema = a.schema({
     price: a.float(),
     user: a.string(),
     status: a.enum(["Pending", "Accepted", "Completed", "Cancelled"]),
+  }),
+  tokenTransaction: a
+  .model({
+    token: a.string(),
+    amount: a.float()
   })
 }).authorization((allow) => [allow.guest()]);
 
