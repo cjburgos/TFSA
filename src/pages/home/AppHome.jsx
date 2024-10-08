@@ -6,7 +6,8 @@ import {RideInProgress} from "../ride_in_progress/rideInProgress.jsx";
 import {RideComplete} from "../ride_complete/rideComplete.jsx";
 import {Assets} from "../assets/Assets.jsx";
 import {Route, Routes} from "react-router-dom";
-import {NavBar} from "../../components/common/NavBar.jsx";
+// import {NavBar} from "../../components/common/NavBar.jsx";
+import {Header} from "../../components/common/Header.jsx";
 
 // // for wallet connect button
 // import '@rainbow-me/rainbowkit/styles.css';
@@ -21,7 +22,7 @@ import {NavBar} from "../../components/common/NavBar.jsx";
 function AppHome () {
     return (
         <div>
-        <NavBar/>
+        <Header/>
         <Routes>
             <Route path="/" element={<Assets/>}/>
             <Route path="/conversion_rates" element={<ConversionRate/>}/>
