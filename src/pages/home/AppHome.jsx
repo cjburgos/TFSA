@@ -7,9 +7,28 @@ import {RideComplete} from "../ride_complete/rideComplete.jsx";
 import {Assets} from "../assets/Assets.jsx";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
+// for wallet connect button
+import '@rainbow-me/rainbowkit/styles.css';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { WagmiProvider } from 'wagmi';
+import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { config } from '../../wagmi';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+
+const client = new QueryClient();
+
 function AppHome () {
     return (
+        
         <BrowserRouter>
+            <WagmiProvider config={config}>
+                <QueryClientProvider client={client}>
+                    <RainbowKitProvider>
+                        {/* app body goes here */}
+                        <ConnectButton label="Connect Wallet" showBalance={true} />
+                    </RainbowKitProvider>
+                </QueryClientProvider>
+            </WagmiProvider>
             <Routes>
                 <Route path="/" element={<Assets/>}/>
                 <Route path="/conversion_rates" element={<ConversionRate/>}/>
