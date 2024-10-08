@@ -40,12 +40,12 @@ contract MetroAggregator is Ownable {
         require(conversionRate[redemption_token] > 0, "Invalid asset");
         require(IERC20(tfsaAddress).balanceOf(msg.sender) >= amount, "Not enough tokens in TFSA");
 
-        uint256 transfer_amount = amount / conversionRate[redemption_token];
+        uint256 transfer_amount = amount / (conversionRate[redemption_token]/10**2);
 
         ICustomERC20(tfsaAddress).burnFrom(msg.sender, amount);
 
         // Transfer redemption tokens to user
-        require(IERC20(redemption_token).transfer(msg.sender, transfer_amount), "Transfer of redemption tokens failed");
+        require(IERC20(redemption_token).transferFrom(treasuryAddress,msg.sender, transfer_amount), "Transfer of redemption tokens failed");
     }
 
     function swapTokens(uint256 amount, address starting_token, address ending_token) public {
@@ -55,7 +55,8 @@ contract MetroAggregator is Ownable {
 
         // Lock the starting token and redeem the ending token
         lockMetroToken(amount, starting_token);
-        redeemMetroToken(amount, ending_token);
+        uint256 tfsa_amount = amount * (conversionRate[starting_token]/10**2);
+        redeemMetroToken(tfsa_amount, ending_token);
     }
 
     // Function to set conversion rates, supporting "decimal-like" values
