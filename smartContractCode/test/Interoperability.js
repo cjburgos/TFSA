@@ -57,9 +57,9 @@ describe("Interoperability",  function () {
 
     describe("Lock Tokens", function () {
         it("Should lock the right amount of tokens", async function () {
-            const { metroAggregator, owner, otherAccount } = await loadFixture(deployMetroAggregatorFixture);
-            const { tokens } = await loadFixture(deployTokenFixture);
-            const { TFSA } = await loadFixture(deployTFSAFixture);
+            const {metroAggregator, owner, otherAccount} = await loadFixture(deployMetroAggregatorFixture);
+            const {tokens} = await loadFixture(deployTokenFixture);
+            const {TFSA} = await loadFixture(deployTFSAFixture);
 
             const tokenAmount = 100;
             const tokenName = "WMATA";
@@ -69,7 +69,7 @@ describe("Interoperability",  function () {
 
             // Set a rate of 1.25 for the token
             await metroAggregator.setConversionRate(token.target, 125, 2);
-            expect(await metroAggregator.conversionRate(token.target)).to.equal(125 * 10**2);
+            expect(await metroAggregator.conversionRate(token.target)).to.equal(125 * 10 ** 2);
             // set a non-null treasury address
             await metroAggregator.setTreasuryAddress(otherAccount.address);
             expect(await metroAggregator.treasuryAddress()).to.equal(otherAccount.address);
@@ -90,10 +90,43 @@ describe("Interoperability",  function () {
             expect(await token.balanceOf(metroAggregator.treasuryAddress())).to.equal(tokenAmount);
 
             const conversionRate = await metroAggregator.conversionRate(token.target);
-            const expectedTFSAAmount = BigInt(originalBalance) + (BigInt(tokenAmount) * (BigInt(conversionRate)/BigInt(10**2)));
+            const expectedTFSAAmount = BigInt(originalBalance) + (BigInt(tokenAmount) * (BigInt(conversionRate) / BigInt(10 ** 2)));
             expect(await TFSA.balanceOf(owner.address)).to.equal(expectedTFSAAmount);
 
         });
     });
+    describe("Redeem Tokens", function () {
+        it("Should Redeem TFSA for an available amount of underlying tokens", async function () {
+            const {metroAggregator, owner, otherAccount} = await loadFixture(deployMetroAggregatorFixture);
+            const {tokens} = await loadFixture(deployTokenFixture);
+            const {TFSA} = await loadFixture(deployTFSAFixture);
 
+            const tokenAmount = 10;
+            const tokenName = "TRAX";
+            const token = tokens[tokenName];
+
+            console.log("Owner original token amount: ", await token.balanceOf(owner.address));
+
+            await token.transfer(otherAccount, tokenAmount);
+
+            console.log("Owner after transfer: ", await token.balanceOf(owner.address));
+
+
+            //     Set config
+            await metroAggregator.setConversionRate(token.target, 125, 2);
+            await metroAggregator.setTreasuryAddress(otherAccount.address);
+            await metroAggregator.setTFSAAddress(TFSA.target);
+            await TFSA.setOperatorApproval(metroAggregator.target, true);
+            await TFSA.approve(metroAggregator.target, tokenAmount);
+
+        //     Redeem
+
+            await metroAggregator.redeemMetroToken(tokenAmount, token.target);
+
+            expect(await TFSA.balanceOf(otherAccount)).to.equal(0);
+            expect(await token.balanceOf(otherAccount)).to.equal(tokenAmount);
+            expect(await token.balanceOf(owner.address)).to.equal(990);
+
+        });
+    });
 })
