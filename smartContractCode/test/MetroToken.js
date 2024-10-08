@@ -16,7 +16,7 @@ const tokenRefs = {
 }
 describe("MetroToken",  function () {
 
-    async function deployTFSAFixture() {
+    async function deployTokenFixture() {
         const [owner, otherAccount] = await ethers.getSigners();
 
         let tokens = {};
@@ -32,7 +32,7 @@ describe("MetroToken",  function () {
 
     describe("Deployment", function () {
         it("Should set the right owner", async function () {
-            const {tokens, owner} = await loadFixture(deployTFSAFixture);
+            const {tokens, owner} = await loadFixture(deployTokenFixture);
             const wmata = await tokens["WMATA"];
             expect(await wmata.owner()).to.equal(owner.address);
         });
