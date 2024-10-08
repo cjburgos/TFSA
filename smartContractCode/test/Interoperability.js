@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const {loadFixture} = require("@nomicfoundation/hardhat-toolbox/network-helpers");
 const { expect } = require("chai");
 const {ethers} = require("hardhat");
@@ -49,6 +50,7 @@ describe("Interoperability",  function () {
         it("Should set the right Metro Token owner", async function () {
             const { tokens, owner } = await loadFixture(deployTokenFixture);
 
+            // eslint-disable-next-line no-unused-vars
             for (const [_name, token] of Object.entries(tokens)) {
                 expect(await token.owner()).to.equal(owner.address);
             }
@@ -126,6 +128,12 @@ describe("Interoperability",  function () {
             expect(await TFSA.balanceOf(otherAccount)).to.equal(0);
             expect(await token.balanceOf(otherAccount)).to.equal(tokenAmount);
             expect(await token.balanceOf(owner.address)).to.equal(990);
+
+        });
+    });
+
+    describe("Swap Tokens", function () {
+        it("It should swap tokens", async function () {
 
         });
     });

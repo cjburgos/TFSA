@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const {loadFixture} = require("@nomicfoundation/hardhat-toolbox/network-helpers");
 const { expect } = require("chai");
 const {ethers} = require("hardhat");
@@ -69,7 +70,7 @@ describe("MetroAggregator",  function () {
 
     describe("Read Values", function () {
         it("Should read the treasury address", async function () {
-            const { metroAggregator, owner } = await loadFixture(deployMetroAggregatorFixture);
+            const { metroAggregator } = await loadFixture(deployMetroAggregatorFixture);
 
             expect(await metroAggregator.treasuryAddress()).to.equal("0x0000000000000000000000000000000000000000");
             const treasuryAddress = "0x5B38Da6a701c568545dCfcB03FcB875f56beddC4"

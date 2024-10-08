@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const {loadFixture} = require("@nomicfoundation/hardhat-toolbox/network-helpers");
 const { expect } = require("chai");
 const {ethers} = require("hardhat");
@@ -49,6 +50,7 @@ describe("MetroToken",  function () {
 
     describe("Transfer", function () {
         it("Should allow for transfer of tokens", async function () {
+            // eslint-disable-next-line no-unused-vars
             const {tokens, owner, otherAccount} = await loadFixture(deployTokenFixture);
             const wmata = await tokens["WMATA"];
             await wmata.transfer(otherAccount.address, 100);
