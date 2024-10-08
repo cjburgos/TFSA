@@ -1,7 +1,7 @@
 import { Menu, MenuItem, View, ThemeProvider } from '@aws-amplify/ui-react';
 import { useNavigate } from 'react-router-dom';
 import { signOut } from 'aws-amplify/auth';
-import './NavBar.css';
+import './Navbar.css';
 
 const theme = {
     name: 'menu-theme',
