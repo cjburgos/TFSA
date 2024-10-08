@@ -13,7 +13,7 @@ function AppHome () {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<ConversionRate/>}/>
-                <Route path="/conversion_rate" element={<ConversionRate/>}/>
+                <Route path="/conversion_rates" element={<ConversionRate/>}/>
                 <Route path="/convert" element={<Convert/>}/>
                 {/*<Route path="/stake" element={<Stake/>}/>*/}
                 <Route path="/ride_start" element={<RideStart/>}/>
