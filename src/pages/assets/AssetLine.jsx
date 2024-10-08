@@ -8,8 +8,8 @@ function AssetLine(props) {
 
     const handleClick = () => {
         navigate("/conversion_rates", {state: {
-                coin: props.token,
-                rate: props.value
+                token: props.token,
+                amountAvailable: props.value
             }});
     }
     return (
