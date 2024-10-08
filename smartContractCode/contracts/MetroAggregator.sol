@@ -40,7 +40,7 @@ contract MetroAggregator is Ownable {
         require(conversionRate[redemption_token] > 0, "Invalid asset");
         require(IERC20(tfsaAddress).balanceOf(msg.sender) >= amount, "Not enough tokens in TFSA");
 
-        uint256 transfer_amount = amount / (conversionRate[redemption_token]/10**2);
+        uint256 transfer_amount = (amount * 10 ** 2) / conversionRate[redemption_token];
 
         ICustomERC20(tfsaAddress).burnFrom(msg.sender, amount);
 
