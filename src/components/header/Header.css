@@ -1,0 +1,9 @@
+.menu-header {
+  display: flex;
+  padding:15px;
+  justify-content: space-between;
+}
+
+.menu-header > * {
+  margin: 0 10px; /* Optional: Add some spacing between child items */
+}

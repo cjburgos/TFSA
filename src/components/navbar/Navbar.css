@@ -1,4 +1,3 @@
 .navBar {
-    display: inherit;
-    justify-content: start;
+    flex: 1;
 }
