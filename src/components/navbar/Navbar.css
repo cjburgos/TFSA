@@ -1,3 +1,12 @@
 .navBar {
     flex: 1;
+    color: white;
+
+}
+.amplify-button--menu {
+    color: white;
+
+}    
+.amplify-icon > svg{
+    color: white;
 }

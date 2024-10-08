@@ -4,8 +4,16 @@ pragma solidity 0.8.20;
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
+// DEV
+import "hardhat/console.sol";
+
 interface IERC20Detailed is IERC20 {
     function decimals() external view returns (uint8);
+}
+
+interface ICustomERC20 is IERC20 {
+    function mint(address to, uint256 amount) external returns (bool);
+    function burnFrom(address from, uint256 amount) external;
 }
 
 contract MetroAggregator is Ownable {
@@ -23,14 +31,9 @@ contract MetroAggregator is Ownable {
     function lockMetroToken(uint256 amount, address token_address) public {
         require(conversionRate[token_address] > 0, "Invalid asset");
         require(IERC20(token_address).balanceOf(msg.sender) >= amount, "Not enough tokens in account");
-
-        uint256 transfer_amount = amount * conversionRate[token_address];
-
-        // Transfer tokens from user to treasury
+        uint256 transfer_amount = amount * (conversionRate[token_address]/10**2);
         require(IERC20(token_address).transferFrom(msg.sender, treasuryAddress, amount), "Transfer to treasury failed");
-
-        // Mint?
-        require(IERC20(tfsaAddress).transfer(msg.sender, transfer_amount), "Transfer from TFSA failed");
+        require(ICustomERC20(tfsaAddress).mint(msg.sender, transfer_amount), "Minting to TFSA failed");
     }
 
     function redeemMetroToken(uint256 amount, address redemption_token) public {
@@ -39,8 +42,7 @@ contract MetroAggregator is Ownable {
 
         uint256 transfer_amount = amount / conversionRate[redemption_token];
 
-        // Burn tokens?
-        require(IERC20(tfsaAddress).transfer(treasuryAddress, amount), "Transfer to treasury failed");
+        ICustomERC20(tfsaAddress).burnFrom(msg.sender, amount);
 
         // Transfer redemption tokens to user
         require(IERC20(redemption_token).transfer(msg.sender, transfer_amount), "Transfer of redemption tokens failed");
