@@ -3,7 +3,7 @@ import {TokenFocus} from "./TokenFocus.jsx";
 import {useLocation} from "react-router-dom";
 import {ConfirmationMsg} from "../../common/ConfirmationMsg.jsx";
 import {useEffect, useState} from "react";
-import {getCoinName} from "../../lib.js";
+import {calculateTokenConversionRate} from "../../lib.js";
 
 
 
@@ -20,7 +20,7 @@ function Convert() {
     };
 
     useEffect(() => {
-        setConversionValue(amount * rightCoin.coin.conversionValue);
+        setConversionValue(calculateTokenConversionRate(amount, leftCoin.balanceToken.conversionValue, rightCoin.coin.conversionValue));
     }, [amount]);
 
 

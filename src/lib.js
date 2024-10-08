@@ -1,7 +1,6 @@
 
-const getCoinName = (path) => {
-    const fileName = path.split('/').pop(); // Get the file name from the path
-    return fileName.replace('.svg', ''); // Remove the .svg extension
+const calculateTokenConversionRate = (amount, leftRate, rightRate) => {
+    return amount * (leftRate / rightRate);
 };
 
-export { getCoinName };
+export { calculateTokenConversionRate };
