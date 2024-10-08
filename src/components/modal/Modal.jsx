@@ -1,4 +1,3 @@
-// src/components/Modal.jsx
 import React, { useState, useEffect } from 'react';
 import { Flex, Text, Divider } from '@aws-amplify/ui-react';
 import { prepareTransactionRequest } from '@wagmi/core';
