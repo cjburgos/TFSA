@@ -4,6 +4,7 @@ import { Flex, Text, Divider } from '@aws-amplify/ui-react';
 import { prepareTransactionRequest } from '@wagmi/core';
 import { parseEther } from 'viem';
 import { config } from '../../wagmi';
+import TokensCollection from '../collections/TokensCollection';
 
 import './Modal.css';
 
@@ -43,6 +44,7 @@ function Modal() {
 
         <div className="modalBody">
           <p> Select Token </p>
+          <TokensCollection/>
         </div>
         
         <div className="modalFooter">
