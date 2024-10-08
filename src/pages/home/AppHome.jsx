@@ -6,18 +6,7 @@ import {RideInProgress} from "../ride_in_progress/rideInProgress.jsx";
 import {RideComplete} from "../ride_complete/rideComplete.jsx";
 import {Assets} from "../assets/Assets.jsx";
 import {Route, Routes} from "react-router-dom";
-// import {NavBar} from "../../components/common/NavBar.jsx";
-import {Header} from "../../components/common/Header.jsx";
-
-// // for wallet connect button
-// import '@rainbow-me/rainbowkit/styles.css';
-// import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-// import { WagmiProvider } from 'wagmi';
-// import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
-// import { config } from '../../wagmi';
-// import { ConnectButton } from '@rainbow-me/rainbowkit';
-
-// const client = new QueryClient();
+import {Header} from "../../components/header/Header.jsx";
 
 function AppHome () {
     return (

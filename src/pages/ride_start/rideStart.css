@@ -1,7 +1,7 @@
 .box {
-    height: 874px;
-    width: 402px;
-    background-color: black;
+    height: 100%;
+    /* width: 402px; */
+    /* background-color: black; */
 }
 
 .box .start-ride {

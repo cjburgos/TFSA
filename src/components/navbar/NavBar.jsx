@@ -1,7 +1,21 @@
-import { Menu, MenuItem, View } from '@aws-amplify/ui-react';
+import { Menu, MenuItem, View, ThemeProvider, Theme } from '@aws-amplify/ui-react';
 import { useNavigate } from 'react-router-dom';
 import { signOut } from 'aws-amplify/auth';
 
+const theme: Theme = {
+    name: 'menu-theme',
+    tokens: {
+      components: {
+        menu: {
+          backgroundColor: { value: 'd9d9d93d' },
+          borderRadius: { value: '0' },
+          item: {
+            minHeight: { value: '5rem' },
+          },
+        },
+      },
+    },
+  };
 
 export const NavBar = () => {
     const navigate = useNavigate();
