@@ -1,9 +1,9 @@
 
 import {TokenFocus} from "./TokenFocus.jsx";
 import {useLocation} from "react-router-dom";
-import {ConfirmationMsg} from "../../common/ConfirmationMsg.jsx";
+import {ConfirmationMsg} from "../../components/common/ConfirmationMsg.jsx";
 import {useEffect, useState} from "react";
-import {calculateTokenConversionRate} from "../../lib.js";
+import {calculateTokenConversionRate} from "../../services/lib.js";
 
 
 
