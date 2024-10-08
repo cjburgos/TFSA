@@ -1,0 +1,14 @@
+# Ignore node_modules and coverage
+node_modules/
+coverage/
+
+# Ignore directories and files created by Hardhat
+artifacts/
+cache/
+typechain/
+
+# Ignore dotenv environment files
+.env
+
+# Ignore Hardhat local node database
+*.db
