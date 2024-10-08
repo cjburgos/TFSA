@@ -4,6 +4,11 @@
   margin: auto;
   padding: auto;
   text-align: center;
+
+
+  --amplify-components-button-menu-disabled-color: white;
+  --amplify-internal-button-color: white;
+
 }
 
 .logo {
