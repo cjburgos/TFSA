@@ -134,6 +134,64 @@ describe("Interoperability",  function () {
 
     describe("Swap Tokens", function () {
         it("It should swap tokens", async function () {
+            const {metroAggregator, owner, otherAccount } = await loadFixture(deployMetroAggregatorFixture);
+            const {tokens} = await loadFixture(deployTokenFixture);
+            const {TFSA} = await loadFixture(deployTFSAFixture);
+
+            const mtaAmount = 10;
+            const traxAmount = 1;
+            const traxToken = tokens["TRAX"];
+            const mtaToken = tokens["MTA"];
+
+
+            //     Set config
+            await metroAggregator.setConversionRate(traxToken.target, 150, 2);
+            await metroAggregator.setConversionRate(mtaToken.target, 50, 2);
+            await metroAggregator.setTreasuryAddress(otherAccount.address);
+            await metroAggregator.setTFSAAddress(TFSA.target);
+            await TFSA.setOperatorApproval(metroAggregator.target, true);
+            await TFSA.approve(metroAggregator.target, 100000);
+
+        //     send to mta to user to lock.
+            const firstUser = ethers.Wallet.createRandom().connect(ethers.provider);
+            const oneBillionthUser = ethers.Wallet.createRandom().connect(ethers.provider);
+
+            // Send funds to users
+            await owner.sendTransaction({
+                to: firstUser.address,
+                value: ethers.parseEther("1.0")
+            });
+            await owner.sendTransaction({
+                to: oneBillionthUser.address,
+                value: ethers.parseEther("1.0")
+            });
+            await mtaToken.transfer(firstUser.address, mtaAmount);
+            await traxToken.transfer(oneBillionthUser.address, traxAmount);
+            await mtaToken.connect(firstUser).approve(metroAggregator.target, mtaAmount);
+            await mtaToken.connect(oneBillionthUser).approve(metroAggregator.target, mtaAmount);
+            await mtaToken.connect(otherAccount).approve(metroAggregator.target, mtaAmount);
+
+            await traxToken.connect(oneBillionthUser).approve(metroAggregator.target, traxAmount);
+
+            await TFSA.connect(firstUser).approve(metroAggregator.target, 100000);
+            await TFSA.connect(oneBillionthUser).approve(metroAggregator.target, 100000);
+
+            await metroAggregator.connect(firstUser).lockMetroToken(mtaAmount, mtaToken.target);
+            console.log("Accounts: ", firstUser.address, oneBillionthUser.address, owner.address, otherAccount.address);
+            console.log("Contracts: ", mtaToken.target, traxToken.target, TFSA.target, metroAggregator.target);
+            console.log("Tresurry MTA balance: ", await mtaToken.balanceOf(otherAccount.address));
+            await metroAggregator.connect(oneBillionthUser).swapTokens(traxAmount, traxToken.target, mtaToken.target,);
+
+            console.log(`Final Token Balances - One Bill: \n
+            mta: ${await mtaToken.balanceOf(oneBillionthUser.address)}\n
+            trax: ${await traxToken.balanceOf(oneBillionthUser.address)}\n
+            tfsa: ${await TFSA.balanceOf(firstUser.address)}`);
+
+            expect(await mtaToken.balanceOf(oneBillionthUser.address)).to.equal(3);
+            expect(await traxToken.balanceOf(oneBillionthUser.address)).to.equal(0);
+            expect(await mtaToken.balanceOf(otherAccount.address)).to.equal(7);
+            expect(await traxToken.balanceOf(otherAccount.address)).to.equal(1);
+            expect(await TFSA.balanceOf(firstUser.address)).to.equal(5);
 
         });
     });
