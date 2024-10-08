@@ -3,11 +3,9 @@ import {TokenFocus} from "./TokenFocus.jsx";
 import {useLocation} from "react-router-dom";
 import {ConfirmationMsg} from "../../common/ConfirmationMsg.jsx";
 import {useEffect, useState} from "react";
+import {getCoinName} from "../../lib.js";
 
-const getCoinName = (path) => {
-    const fileName = path.split('/').pop(); // Get the file name from the path
-    return fileName.replace('.svg', ''); // Remove the .svg extension
-};
+
 
 function Convert() {
 

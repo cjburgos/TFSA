@@ -1,5 +1,5 @@
 
-import MetroToken from "../../assets/coins/MetroCoin.svg";
+import MetroToken from "../../assets/coins/Metro.svg";
 import "./rideInProgress.css";
 
 function RideInProgress() {

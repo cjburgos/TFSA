@@ -1,4 +1,4 @@
-import MetroToken from "../../assets/coins/MetroCoin.svg";
+import MetroToken from "../../assets/coins/Metro.svg";
 import "./rideStart.css";
 
 function RideStart() {

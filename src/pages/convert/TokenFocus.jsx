@@ -1,7 +1,7 @@
 import React from 'react';
 import {AmountBox} from "./AmountBox.jsx";
 import "./convert.css";
-import TFSACoin from "../../assets/coins/TFSACoin.svg";
+import TFSACoin from "../../assets/coins/TFSA.svg";
 
 
 function TokenFocus(props) {

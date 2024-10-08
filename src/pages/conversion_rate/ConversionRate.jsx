@@ -1,10 +1,10 @@
 import React from "react";
 import "./conversionRate.css";
 import {RateLine} from "./RateLine.jsx";
-import MetroCoin from "../../assets/coins/MetroCoin.svg";
-import TRAXCoin from "../../assets/coins/TRAXCoin.svg";
-import CTACoin from "../../assets/coins/ctaCoin.svg";
-import TCoin from "../../assets/coins/TCoin.svg";
+import MetroCoin from "../../assets/coins/Metro.svg";
+import TRAXCoin from "../../assets/coins/TRAX.svg";
+import CTACoin from "../../assets/coins/CTA.svg";
+import TCoin from "../../assets/coins/T.svg";
 
 
 
