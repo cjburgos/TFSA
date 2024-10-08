@@ -5,16 +5,17 @@ import TFSACoin from "../../assets/coins/TFSA.svg";
 
 
 function TokenFocus(props) {
+    console.log(props)
 
     return (
         <div className={"token-box"}>
             <div className={"left-token"}>
-                <img src={TFSACoin} alt="coin"/>
-                <AmountBox amount={props.value}/>
+                <img src={props.leftCoin.balanceToken.img} alt="coin"/>
+                <AmountBox amount={props.leftCoin.balanceToken.shortName}/>
             </div>
             <div className={"right-token"}>
-                <img src={props.coin} alt="coin"/>
-                <AmountBox amount={props.value}/>
+                <img src={props.rightCoin.coin.img} alt="coin"/>
+                <AmountBox amount={props.rightCoin.coin.conversionValue}/>
             </div>
         </div>
     )
