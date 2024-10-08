@@ -1,536 +1,346 @@
 .box {
-    height: 874px;
-    width: 404px;
+  height: 711px;
+  position: relative;
+  width: 404px;
 }
 
 .box .conversion-rate {
-    height: 874px;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 404px;
-}
-
-.box .overlap {
-    height: 874px;
-    position: relative;
-}
-
-.box .phone {
-    height: 874px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 402px;
-}
-
-.box .conversion-rates {
-    height: 874px;
-}
-
-.box .overlap-group {
-    background-color: #000000;
-    border-radius: 50px;
-    height: 884px;
-    position: relative;
-    width: 402px;
-}
-
-.box .home-indicator-instance {
-    left: 0 !important;
-    position: absolute !important;
-    top: 853px !important;
-    width: 402px !important;
-}
-
-.box .design-component-instance-node {
-    left: 131px !important;
-}
-
-.box .bezel {
-    height: 873px !important;
-    left: 0 !important;
-    position: absolute !important;
-    top: 0 !important;
-}
-
-.box .iphone-16-pro {
-    height: 920px !important;
-    left: -24px !important;
-    top: -23px !important;
-    width: 450px !important;
+  height: 711px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 404px;
 }
 
 .box .rate-container {
-    height: 468px;
-    left: 0;
-    position: absolute;
-    top: 329px;
-    width: 404px;
+  height: 468px;
+  left: 0;
+  position: absolute;
+  top: 243px;
+  width: 404px;
 }
 
 .box .exchange-background {
-    height: 468px;
-    position: relative;
+  height: 468px;
+  position: relative;
 }
 
 .box .exchange-coin {
-    height: 156px;
-    left: 2px;
-    position: absolute;
-    top: 312px;
-    width: 402px;
+  height: 156px;
+  left: 2px;
+  position: absolute;
+  top: 312px;
+  width: 402px;
 }
 
-.box .overlap-2 {
-    height: 156px;
-    position: relative;
+.box .overlap {
+  height: 156px;
+  position: relative;
 }
 
 .box .line {
-    height: 1px;
-    left: 0;
-    object-fit: cover;
-    position: absolute;
-    top: 155px;
-    width: 402px;
+  height: 1px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 155px;
+  width: 402px;
 }
 
-.box .exchange-coin-2 {
-    background-color: #6036a321;
-    filter: blur(4px);
-    height: 156px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 402px;
+.box .div {
+  background-color: #6036a321;
+  filter: blur(4px);
+  height: 156px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 402px;
 }
 
 .box .swipe-continer {
-    background-color: #d9d9d93d;
-    border-radius: 25px;
-    height: 115px;
-    left: 23px;
-    position: absolute;
-    top: 15px;
-    width: 345px;
+  background-color: #d9d9d93d;
+  border-radius: 25px;
+  height: 115px;
+  left: 23px;
+  position: absolute;
+  top: 15px;
+  width: 345px;
 }
 
-.box .rectangle-wrapper {
-    background-color: #f9f9f94f;
-    border-radius: 25px;
-    height: 77px;
-    left: 45px;
-    position: relative;
-    top: 19px;
-    width: 284px;
+.box .overlap-group {
+  background-color: #f9f9f94f;
+  border-radius: 25px;
+  height: 77px;
+  left: 45px;
+  position: relative;
+  top: 19px;
+  width: 284px;
 }
 
 .box .rectangle {
-    background-color: #1919194f;
-    border-radius: 25px;
-    height: 62px;
-    left: 13px;
-    position: relative;
-    top: 7px;
-    width: 260px;
+  background-color: #1919194f;
+  border-radius: 25px;
+  height: 62px;
+  left: 13px;
+  position: relative;
+  top: 7px;
+  width: 260px;
 }
 
 .box .rate {
-    height: 81px;
-    left: 273px;
-    position: absolute;
-    top: 34px;
-    width: 81px;
+  height: 81px;
+  left: 273px;
+  position: absolute;
+  top: 34px;
+  width: 81px;
 }
 
-.box .overlap-3 {
-    background-color: #161515;
-    border-radius: 25px;
-    height: 81px;
-    position: relative;
-    width: 79px;
+.box .overlap-2 {
+  background-color: #161515;
+  border-radius: 25px;
+  height: 81px;
+  position: relative;
+  width: 79px;
 }
 
 .box .rectangle-2 {
-    background-color: #000000;
-    border-radius: 25px;
-    height: 72px;
-    left: 4px;
-    position: absolute;
-    top: 5px;
-    width: 71px;
+  background-color: #000000;
+  border-radius: 25px;
+  height: 72px;
+  left: 4px;
+  position: absolute;
+  top: 5px;
+  width: 71px;
 }
 
 .box .text-wrapper {
-    -webkit-text-stroke: 1px #f9f9f94f;
-    color: #f5f5f5;
-    font-family: "Acme-Regular", Helvetica;
-    font-size: 30px;
-    font-weight: 400;
-    height: 25px;
-    left: 13px;
-    letter-spacing: -0.43px;
-    line-height: 22px;
-    position: absolute;
-    top: 30px;
-    white-space: nowrap;
-    width: 51px;
+  -webkit-text-stroke: 1px #f9f9f94f;
+  color: #f5f5f5;
+  font-family: "Acme", Helvetica;
+  font-size: 30px;
+  font-weight: 400;
+  height: 25px;
+  left: 13px;
+  letter-spacing: -0.43px;
+  line-height: 22px;
+  position: absolute;
+  top: 30px;
+  white-space: nowrap;
+  width: 51px;
 }
 
 .box .MTA-coin {
-    height: 86px;
-    left: 36px;
-    position: absolute;
-    top: 28px;
-    width: 85px;
-}
-
-.box .overlap-4 {
-    height: 86px;
-    position: relative;
-}
-
-.box .ellipse {
-    background-color: #000000;
-    border-radius: 42.5px;
-    box-shadow: 0px 4px 4px #00000040;
-    height: 85px;
-    left: 0;
-    position: absolute;
-    top: 1px;
-    width: 85px;
-}
-
-.box .ellipse-2 {
-    background-color: #0039a6;
-    border-radius: 34px;
-    height: 68px;
-    left: 8px;
-    position: absolute;
-    top: 10px;
-    width: 68px;
-}
-
-.box .image {
-    height: 61px;
-    left: 15px;
-    position: absolute;
-    top: 13px;
-    width: 57px;
-}
-
-.box .img {
-    height: 76px;
-    left: 4px;
-    position: absolute;
-    top: 5px;
-    width: 76px;
-}
-
-.box .ellipse-3 {
-    height: 86px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 85px;
+  height: 94px;
+  left: 36px;
+  position: absolute;
+  top: 28px;
+  width: 93px;
 }
 
 .box .overlap-wrapper {
-    height: 156px;
-    left: 0;
-    position: absolute;
-    top: 156px;
-    width: 402px;
+  height: 156px;
+  left: 0;
+  position: absolute;
+  top: 156px;
+  width: 402px;
 }
 
 .box .overlap-group-wrapper {
-    background-color: #d9d9d93d;
-    border-radius: 25px;
-    height: 115px;
-    left: 25px;
-    position: absolute;
-    top: 17px;
-    width: 345px;
+  background-color: #d9d9d93d;
+  border-radius: 25px;
+  height: 115px;
+  left: 25px;
+  position: absolute;
+  top: 17px;
+  width: 345px;
 }
 
-.box .div-wrapper {
-    background-color: #f9f9f94f;
-    border-radius: 25px;
-    height: 77px;
-    left: 43px;
-    position: relative;
-    top: 17px;
-    width: 284px;
+.box .rectangle-wrapper {
+  background-color: #f9f9f94f;
+  border-radius: 25px;
+  height: 77px;
+  left: 43px;
+  position: relative;
+  top: 17px;
+  width: 284px;
 }
 
 .box .rate-2 {
-    -webkit-text-stroke: 1px #f9f9f94f;
-    color: #f5f5f5;
-    font-family: "Acme-Regular", Helvetica;
-    font-size: 30px;
-    font-weight: 400;
-    height: 25px;
-    left: 13px;
-    letter-spacing: -0.43px;
-    line-height: 22px;
-    position: absolute;
-    top: 27px;
-    white-space: nowrap;
-    width: 58px;
+  -webkit-text-stroke: 1px #f9f9f94f;
+  color: #f5f5f5;
+  font-family: "Acme", Helvetica;
+  font-size: 30px;
+  font-weight: 400;
+  height: 25px;
+  left: 13px;
+  letter-spacing: -0.43px;
+  line-height: 22px;
+  position: absolute;
+  top: 27px;
+  white-space: nowrap;
+  width: 58px;
 }
 
-.box .muni-coin {
-    height: 85px;
-    left: 36px;
-    position: absolute;
-    top: 29px;
-    width: 85px;
+.box .TRAX-coin {
+  height: 93px;
+  left: 36px;
+  position: absolute;
+  top: 29px;
+  width: 93px;
 }
 
-.box .overlap-5 {
-    border-radius: 42.5px;
-    height: 85px;
-    position: relative;
-}
-
-.box .metro-coin {
-    background-color: #000000;
-    border-radius: 42.5px;
-    box-shadow: 0px 4px 4px #00000040;
-    height: 85px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 85px;
-}
-
-.box .ellipse-wrapper {
-    background-color: #cc3847;
-    border-radius: 38.25px;
-    height: 76px;
-    left: 4px;
-    position: relative;
-    top: 4px;
-    width: 76px;
-}
-
-.box .ellipse-4 {
-    background-color: #ffffff;
-    border-radius: 34px;
-    height: 68px;
-    left: 4px;
-    position: relative;
-    top: 4px;
-    width: 68px;
-}
-
-.box .image-2 {
-    height: 28px;
-    left: 12px;
-    object-fit: cover;
-    position: absolute;
-    top: 29px;
-    width: 61px;
-}
-
-.box .exchange-coin-3 {
-    height: 156px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 402px;
+.box .div-wrapper {
+  height: 156px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 402px;
 }
 
 .box .swipe-continer-2 {
-    height: 115px;
-    left: 25px;
-    position: absolute;
-    top: 14px;
-    width: 345px;
+  height: 115px;
+  left: 25px;
+  position: absolute;
+  top: 14px;
+  width: 345px;
 }
 
 .box .overlap-group-2 {
-    border-radius: 25px;
-    height: 115px;
-    position: relative;
+  border-radius: 25px;
+  height: 115px;
+  position: relative;
 }
 
 .box .rectangle-3 {
-    background-color: #f9f9f94f;
-    border-radius: 25px;
-    height: 77px;
-    left: 43px;
-    position: absolute;
-    top: 20px;
-    width: 284px;
+  background-color: #f9f9f94f;
+  border-radius: 25px;
+  height: 77px;
+  left: 43px;
+  position: absolute;
+  top: 20px;
+  width: 284px;
 }
 
 .box .rectangle-4 {
-    background-color: #1919194f;
-    border-radius: 25px;
-    height: 62px;
-    left: 56px;
-    position: absolute;
-    top: 27px;
-    width: 260px;
+  background-color: #1919194f;
+  border-radius: 25px;
+  height: 62px;
+  left: 56px;
+  position: absolute;
+  top: 27px;
+  width: 260px;
 }
 
 .box .swipe-background {
-    background-color: #d9d9d93d;
-    border-radius: 25px;
-    height: 115px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 345px;
+  background-color: #d9d9d93d;
+  border-radius: 25px;
+  height: 115px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 345px;
 }
 
 .box .text-wrapper-2 {
-    -webkit-text-stroke: 1px #f9f9f94f;
-    color: #f5f5f5;
-    font-family: "Acme-Regular", Helvetica;
-    font-size: 30px;
-    font-weight: 400;
-    height: 25px;
-    left: 13px;
-    letter-spacing: -0.43px;
-    line-height: 22px;
-    position: absolute;
-    top: 27px;
-    white-space: nowrap;
-    width: 51px;
+  -webkit-text-stroke: 1px #f9f9f94f;
+  color: #f5f5f5;
+  font-family: "Acme", Helvetica;
+  font-size: 30px;
+  font-weight: 400;
+  height: 25px;
+  left: 13px;
+  letter-spacing: -0.43px;
+  line-height: 22px;
+  position: absolute;
+  top: 27px;
+  white-space: nowrap;
+  width: 51px;
 }
 
-.box .metro-coin-2 {
-    height: 85px;
-    left: 36px;
-    position: absolute;
-    top: 30px;
-    width: 85px;
+.box .metro-coin {
+  height: 93px;
+  left: 35px;
+  position: absolute;
+  top: 31px;
+  width: 93px;
 }
 
-.box .overlap-group-3 {
-    background-color: #f5f5f5;
-    border-radius: 38.25px;
-    height: 76px;
-    left: 4px;
-    position: relative;
-    top: 4px;
-    width: 76px;
-}
-
-.box .ellipse-5 {
-    background-color: #000000;
-    border-radius: 34px;
-    height: 68px;
-    left: 4px;
-    position: relative;
-    top: 4px;
-    width: 68px;
-}
-
-.box .image-3 {
-    height: 50px;
-    left: 20px;
-    object-fit: cover;
-    position: absolute;
-    top: 17px;
-    width: 45px;
-}
-
-.box .line-2 {
-    height: 1px;
-    left: 2px;
-    object-fit: cover;
-    position: absolute;
-    top: -1px;
-    width: 402px;
+.box .img {
+  height: 1px;
+  left: 2px;
+  object-fit: cover;
+  position: absolute;
+  top: -1px;
+  width: 402px;
 }
 
 .box .title {
-    height: 65px;
-    left: 25px;
-    position: absolute;
-    top: 233px;
-    width: 347px;
+  height: 65px;
+  left: 25px;
+  position: absolute;
+  top: 147px;
+  width: 347px;
 }
 
-.box .overlap-6 {
-    height: 65px;
-    position: relative;
-    top: -1px;
-    width: 344px;
+.box .overlap-3 {
+  height: 65px;
+  position: relative;
+  top: -1px;
+  width: 344px;
 }
 
 .box .rectangle-5 {
-    background-color: #d9d9d91a;
-    border-radius: 250px;
-    height: 64px;
-    left: 0;
-    position: absolute;
-    top: 1px;
-    width: 338px;
+  background-color: #d9d9d91a;
+  border-radius: 250px;
+  height: 64px;
+  left: 0;
+  position: absolute;
+  top: 1px;
+  width: 338px;
 }
 
 .box .text-wrapper-3 {
-    -webkit-text-stroke: 1px #000000;
-    color: #fffefe;
-    font-family: "Acme-Regular", Helvetica;
-    font-size: 50px;
-    font-weight: 400;
-    height: 65px;
-    left: 6px;
-    letter-spacing: -0.43px;
-    line-height: 22px;
-    position: absolute;
-    text-shadow: 2px 4px 5px #6036a3;
-    top: 0;
-    width: 338px;
+  -webkit-text-stroke: 1px #000000;
+  color: #fffefe;
+  font-family: "Acme", Helvetica;
+  font-size: 50px;
+  font-weight: 400;
+  height: 65px;
+  left: 6px;
+  letter-spacing: -0.43px;
+  line-height: 22px;
+  position: absolute;
+  text-shadow: 2px 4px 5px #6036a3;
+  top: 0;
+  width: 338px;
 }
 
 .box .TFSA-container {
-    background-color: #d9d9d930;
-    border-radius: 13px;
-    height: 134px;
-    left: 0;
-    position: absolute;
-    top: 86px;
-    width: 404px;
-}
-
-.box .overlap-7 {
-    height: 108px;
-    left: 27px;
-    position: relative;
-    top: 17px;
-    width: 325px;
+  background-color: #d9d9d930;
+  border-radius: 13px;
+  height: 134px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 404px;
 }
 
 .box .swipe-continer-3 {
-    background-color: #f9f9f94f;
-    border-radius: 25px;
-    height: 99px;
-    left: 41px;
-    position: absolute;
-    top: 1px;
-    width: 284px;
+  background-color: #f9f9f94f;
+  border-radius: 25px;
+  height: 99px;
+  left: 68px;
+  position: relative;
+  top: 18px;
+  width: 284px;
 }
 
 .box .rectangle-6 {
-    background-color: #1919194f;
-    border-radius: 25px;
-    height: 80px;
-    left: 13px;
-    position: relative;
-    top: 9px;
-    width: 260px;
-}
-
-.box .TFSA-coin {
-    height: 108px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 108px;
+  background-color: #1919194f;
+  border-radius: 25px;
+  height: 80px;
+  left: 13px;
+  position: relative;
+  top: 9px;
+  width: 260px;
 }
