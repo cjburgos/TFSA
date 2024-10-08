@@ -9,6 +9,9 @@ import {getCoinName} from "../../lib.js";
 
 function Convert() {
 
+    const location = useLocation();
+    const {leftCoin, rightCoin} = location.state;
+
     const [amount, setAmount] = useState(0.00);
     const [conversionValue, setConversionValue] = useState(0.00);
 
@@ -17,15 +20,15 @@ function Convert() {
     };
 
     useEffect(() => {
-        setConversionValue(amount * rate);
+        setConversionValue(amount * rightCoin.coin.conversionValue);
     }, [amount]);
 
-    const location = useLocation();
-    const {coin, rate} = location.state;
+
+
     return (
        <div className={"convert-box"}>
-           <TokenFocus coin={coin} rate={rate}/>
-           <ConfirmationMsg msg={`Convert ${amount} TFSA to ${conversionValue} ${getCoinName(coin)}`}/>
+           <TokenFocus leftCoin={leftCoin} rightCoin={rightCoin}/>
+           <ConfirmationMsg msg={`Convert ${amount} ${leftCoin.balanceToken.shortName} to ${conversionValue} ${rightCoin.coin.shortName}`}/>
               <h3>Amount To Convert</h3>
            <input
                type="number"
