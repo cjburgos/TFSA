@@ -8,8 +8,14 @@ function RateLine(props) {
 
     const handleClick = () => {
         navigate("/convert", {state: {
-                coin: props.coin,
-                rate: props.value
+            leftCoin: {
+                balanceToken: props.balanceToken,
+                available: props.balanceAvailable
+            },
+            rightCoin: {
+                coin: props.token,
+            }
+
             }});
     }
 
@@ -17,10 +23,10 @@ function RateLine(props) {
     return (
         <div className="rate-line">
             <div className="rate-coin">
-                <img src={props.coin} alt="coin" onClick={handleClick} />
+                <img src={props.token.img} alt={props.token.longName} onClick={handleClick} />
             </div>
             <div className="rate-value">
-                {props.value}
+                {props.token.conversionValue}
             </div>
         </div>
     );
