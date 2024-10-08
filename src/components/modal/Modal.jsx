@@ -26,11 +26,15 @@ function Modal() {
 
   const getTimestamp = new Date().toLocaleString();
 
-  const prepareTxn = prepareTransactionRequest(config, {
-    to: '0x70997970c51812dc3a010c7d01b50e0d17dc79c8',
-    account: '0x70997970c51812dc3a010c7d01b50e0d17dc79c8',
-    value: parseEther('1'),
-  })
+  const prepareTxn = async () =>{
+    let transaction = await prepareTransactionRequest(config, {
+      to: '0x70997970c51812dc3a010c7d01b50e0d17dc79c8',
+      account: '0x70997970c51812dc3a010c7d01b50e0d17dc79c8',
+      value: parseEther('1'),
+    })
+    console.log(transaction)
+    
+  } 
 
   return (
     <div className={`modal ${isVisible ? 'modal-visible' : ''}`}>
@@ -48,7 +52,7 @@ function Modal() {
         </div>
         
         <div className="modalFooter">
-          <button onClick={prepareTxn}> Confirm </button>
+          <button onClick={prepareTxn()}> Confirm </button>
           <button onClick={closeModal}> Cancel </button>
         </div>
     </div>
