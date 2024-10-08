@@ -1,20 +1,25 @@
 import React from "react";
 import "./conversionRate.css";
 import {RateLine} from "./RateLine.jsx";
-import MetroCoin from "../../assets/coins/Metro.svg";
-import TRAXCoin from "../../assets/coins/TRAX.svg";
-import CTACoin from "../../assets/coins/CTA.svg";
-import TCoin from "../../assets/coins/T.svg";
 
+import TokenMeta from "../../../tokenMeta.json"
+import {useLocation} from "react-router-dom";
 
 
 function ConversionRate () {
-  return (
+    const location = useLocation();
+    const {token, amountAvailable} = location.state;
+    if (!token || !amountAvailable) {
+        return <div>Error: Missing token or amount available data.</div>;
+    }
+
+    const filteredItems = Object.values(TokenMeta).filter(item => item.shortName !== token.shortName);
+
+    return (
     <div className={"rate-outer"}>
-      <RateLine coin={MetroCoin} value={1.25}/>
-      <RateLine coin={TRAXCoin} value={0.97}/>
-      <RateLine coin={CTACoin} value={1.23}/>
-      <RateLine coin={TCoin} value={0.47}/>
+        {filteredItems.map(item => (
+            <RateLine balanceToken={token} token={item}  balanceAvailable={amountAvailable} amountAvailable={amountAvailable} key={item.shortName}/>
+        ))}
     </div>
   );
 };
