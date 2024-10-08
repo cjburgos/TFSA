@@ -3,13 +3,13 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-import  AppHome  from "./home/AppHome.jsx";
+import  Login  from "./pages/login/Login.jsx";
 
 function App() {
 
   return (
     <>
-      <AppHome />
+      <Login />
     </>
   )
 }

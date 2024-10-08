@@ -3,26 +3,14 @@
     width: 402px;
 }
 
-.box .end-ride {
-    height: 874px;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 402px;
-}
+
 
 .box .overlap {
     height: 874px;
     position: relative;
 }
 
-.box .phone {
-    height: 874px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 402px;
-}
+
 
 .box .overlap-group-wrapper {
     height: 874px;
@@ -36,30 +24,6 @@
     width: 402px;
 }
 
-.box .home-indicator-instance {
-    left: 0 !important;
-    position: absolute !important;
-    top: 853px !important;
-    width: 402px !important;
-}
-
-.box .design-component-instance-node {
-    left: 131px !important;
-}
-
-.box .bezel {
-    height: 873px !important;
-    left: 0 !important;
-    position: absolute !important;
-    top: 0 !important;
-}
-
-.box .iphone-16-pro {
-    height: 920px !important;
-    left: -24px !important;
-    top: -23px !important;
-    width: 450px !important;
-}
 
 .box .coin-group {
     height: 112px;
@@ -149,4 +113,11 @@
     text-shadow: 0px 4px 4px #00000040;
     top: 31px;
     width: 29px;
+}
+
+
+.checkmark {
+    top: 130px;
+    left: 90px;
+    position: absolute;
 }

@@ -6,7 +6,7 @@ import confirmButton from "./confirm-button.png";
 import image2 from "./image-2.png";
 import "./style.css";
 
-export const Box = () => {
+function Stake() {
     return (
         <div className="box">
             <div className="stake">
@@ -73,3 +73,6 @@ export const Box = () => {
         </div>
     );
 };
+
+
+export {Stake}
