@@ -15,8 +15,9 @@ contract TFSA is ERC20, ERC20Burnable, Ownable {
         approved_operators[minter] = approval;
     }
 
-    function mint(address to, uint256 amount) public {
+    function mint(address to, uint256 amount) public returns (bool) {
         require(approved_operators[msg.sender], "Minter not approved");
         _mint(to, amount);
+        return true;
     }
 }
