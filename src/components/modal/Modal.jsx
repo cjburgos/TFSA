@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Flex, Text, Divider } from '@aws-amplify/ui-react';
 import { prepareTransactionRequest } from '@wagmi/core';
+import { useNavigate } from 'react-router-dom';
 import { parseEther } from 'viem';
 import { config } from '../../wagmi';
 import TokensCollection from '../collections/TokensCollection';
+
+import { createTransaction } from '../../services/transactions';
 
 import './Modal.css';
 
 
 function Modal() {
   const [isVisible,setIsVisible] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -21,6 +25,7 @@ function Modal() {
   
   const closeModal = () => {
       setIsVisible(false);
+      navigate('/');
   }
 
   const getTimestamp = new Date().toLocaleString();
@@ -32,7 +37,19 @@ function Modal() {
       value: parseEther('1'),
     })
     console.log(transaction)
-    
+    let response = await createTransaction({
+      amount: transaction.value,
+      status: 'pending',
+      gas: transaction.gas,
+      gasPrice: transaction.gasPrice,
+      from: transaction.from,
+      to: transaction.to,
+      chainId: transaction.chainId,
+      nonce: transaction.nonce,
+      hash: '',
+      timestamp: 0
+    })
+    console.log(response)
   } 
 
   return (

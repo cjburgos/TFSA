@@ -19,7 +19,6 @@ function HandleCases() {
     };
   
     const { isConnected } = useAccount();
-    // console.log(isConnected);
   
     if (isConnected) {
       return (
@@ -43,14 +42,6 @@ function Assets() {
         <HandleCases />
         </QueryClientProvider>
     </WagmiProvider>)
-
-    // return (
-    //     <div className={"asset-line-container"}>
-    //         <AssetLine token={TokenMeta.MetroToken} value={433.34}/>
-    //         <AssetLine token={TokenMeta.MTAToken} value={104.12} />
-    //         <AssetLine token={TokenMeta.TFSA} value={3.00} />
-    //     </div>
-    // )
 }
 
 export {Assets};
