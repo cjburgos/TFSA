@@ -67,4 +67,15 @@ describe("MetroAggregator",  function () {
         });
     });
 
+    describe("Read Values", function () {
+        it("Should read the treasury address", async function () {
+            const { metroAggregator, owner } = await loadFixture(deployMetroAggregatorFixture);
+
+            expect(await metroAggregator.treasuryAddress()).to.equal("0x0000000000000000000000000000000000000000");
+            const treasuryAddress = "0x5B38Da6a701c568545dCfcB03FcB875f56beddC4"
+            await metroAggregator.setTreasuryAddress(treasuryAddress);
+            expect(await metroAggregator.treasuryAddress()).to.equal(treasuryAddress);
+        });
+    });
+
 });
