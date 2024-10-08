@@ -1,56 +1,80 @@
-import {AssetLine} from "./AssetLine.jsx";
-import "./assets.css"
-import TokenMeta from "../../../tokenMeta.json"
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { AssetLine } from './AssetLine.jsx';
+import './assets.css';
+import TokenMeta from '../../../tokenMeta.json';
 import { useAccount } from 'wagmi';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { WagmiProvider } from 'wagmi';
 import { config } from '../../wagmi';
-import {ConnectWallet} from "../../components/web3/ConnectWallet.jsx";
+import { ConnectWallet } from '../../components/web3/ConnectWallet.jsx';
+import { getBalance } from '@wagmi/core';
 
 const client = new QueryClient();
-
+const tokenList = [TokenMeta.TestToken]; // Add other tokens as needed
 
 function HandleCases() {
-    const navigate = useNavigate();
-    const handleButtonClick = (path) => {
-      console.log("clicked");
-      navigate(path);
+  const { address, isConnected } = useAccount(); // Get the connected wallet information
+  const [tokenBalances, setTokenBalances] = useState(new Map());
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchBalances = async () => {
+      if (isConnected && address) {
+        const balances = new Map();
+
+        for (let i = 0; i < tokenList.length; i++) {
+            console.log("printing addr");
+            console.log(address);
+            const params = {
+                address: address,
+                token: tokenList[i].tokenContractAddr,
+              };
+            console.log(params);
+        //   try {
+            const balanceObj = await getBalance(config, params);
+            console.log(balanceObj);
+            const formattedBalance = Number(balanceObj.value) / 10**balanceObj.decimals;
+            balances.set(tokenList[i].shortName, formattedBalance);
+        //   } catch (error) {
+        //     balances.set(tokenList[i].shortName, 0.0);
+
+        //     console.error(`Error fetching balance for ${tokenList[i].shortName}:`, error);
+        //   }
+        }
+
+        setTokenBalances(balances);
+        setLoading(false);
+      }
     };
-  
-    const { isConnected } = useAccount();
-    // console.log(isConnected);
-  
-    if (isConnected) {
-      return (
-        <div className={"asset-line-container"}>
-            <AssetLine token={TokenMeta.MetroToken} value={433.34}/>
-            <AssetLine token={TokenMeta.MTAToken} value={104.12} />
-            <AssetLine token={TokenMeta.TFSA} value={3.00} />
-        </div>);
-    }
-    else {
-      return <ConnectWallet />;
-    }
-    
+
+    fetchBalances();
+  }, [address, isConnected]); // Fetch balances when the account or connection status changes
+
+  if (!isConnected) {
+    return <ConnectWallet />;
   }
 
-function Assets() {
+  if (loading) {
+    return <p>Loading balances...</p>; // Show a loading state while fetching
+  }
 
-    return (
-    <WagmiProvider config={config}>
-        <QueryClientProvider client={client}>
-        <HandleCases />
-        </QueryClientProvider>
-    </WagmiProvider>)
-
-    // return (
-    //     <div className={"asset-line-container"}>
-    //         <AssetLine token={TokenMeta.MetroToken} value={433.34}/>
-    //         <AssetLine token={TokenMeta.MTAToken} value={104.12} />
-    //         <AssetLine token={TokenMeta.TFSA} value={3.00} />
-    //     </div>
-    // )
+  return (
+    <div className={"asset-line-container"}>
+        <AssetLine token={TokenMeta.TestToken} value={tokenBalances.get(TokenMeta.TestToken.shortName)}/>
+        <AssetLine token={TokenMeta.MTAToken} value={104.12} />
+        <AssetLine token={TokenMeta.TFSA} value={3.00} />
+    </div>
+  );
 }
 
-export {Assets};
+function Assets() {
+  return (
+    <WagmiProvider config={config}>
+      <QueryClientProvider client={client}>
+        <HandleCases />
+      </QueryClientProvider>
+    </WagmiProvider>
+  );
+}
+
+export { Assets };

@@ -1,4 +1,5 @@
 import { getDefaultConfig } from '@rainbow-me/rainbowkit';
+import { http } from 'viem';
 import {
   rootstockTestnet
 } from 'wagmi/chains';
@@ -10,5 +11,8 @@ export const config = getDefaultConfig({
     rootstockTestnet
     // ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [rootstockTestnet] : []),
   ],
+  transports: {
+    [rootstockTestnet.id]: http(),
+  },
   ssr: true,
 });

@@ -1,4 +1,5 @@
 import { type ClientSchema, a, defineData } from '@aws-amplify/backend';
+import { fromBlobs } from 'viem';
 
 /*== STEP 1 ===============================================================
 The section below creates a Todo database table with a "content" field. Try
@@ -40,8 +41,16 @@ const schema = a.schema({
   }),
   tokenTransaction: a
   .model({
-    token: a.string(),
-    amount: a.float()
+    amount: a.string(),
+    status: a.string(),
+    gas: a.string(),
+    gasPrice: a.string(),
+    from: a.string(),
+    to: a.string(),
+    chainId: a.string(),
+    nonce: a.string(),
+    hash: a.string(),
+    timestamp: a.string()
   })
 }).authorization((allow) => [allow.guest()]);
 
