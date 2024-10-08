@@ -13,7 +13,7 @@ interface IERC20Detailed is IERC20 {
 
 interface ICustomERC20 is IERC20 {
     function mint(address to, uint256 amount) external returns (bool);
-    function burn(address from, uint256 amount) external returns (bool);
+    function burnFrom(address from, uint256 amount) external;
 }
 
 contract MetroAggregator is Ownable {
@@ -42,7 +42,7 @@ contract MetroAggregator is Ownable {
 
         uint256 transfer_amount = amount / conversionRate[redemption_token];
 
-        require(ICustomERC20(tfsaAddress).burn(treasuryAddress, amount), "Transfer to treasury failed");
+        ICustomERC20(tfsaAddress).burnFrom(msg.sender, amount);
 
         // Transfer redemption tokens to user
         require(IERC20(redemption_token).transfer(msg.sender, transfer_amount), "Transfer of redemption tokens failed");
