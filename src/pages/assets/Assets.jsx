@@ -10,7 +10,7 @@ import { ConnectWallet } from '../../components/web3/ConnectWallet.jsx';
 import { getBalance } from '@wagmi/core';
 
 const client = new QueryClient();
-const tokenList = [TokenMeta.TestToken]; // Add other tokens as needed
+const tokenList = [TokenMeta.TFSA, TokenMeta.TRAXToken, TokenMeta.WMATAToken]; // Add other tokens as needed
 
 function HandleCases() {
   const { address, isConnected } = useAccount(); // Get the connected wallet information
@@ -60,9 +60,9 @@ function HandleCases() {
 
   return (
     <div className={"asset-line-container"}>
-        <AssetLine token={TokenMeta.TestToken} value={tokenBalances.get(TokenMeta.TestToken.shortName)}/>
-        <AssetLine token={TokenMeta.MTAToken} value={104.12} />
-        <AssetLine token={TokenMeta.TFSA} value={3.00} />
+        <AssetLine token={TokenMeta.TFSA} value={tokenBalances.get(TokenMeta.TFSA.shortName)}/>
+        <AssetLine token={TokenMeta.TRAXToken} value={tokenBalances.get(TokenMeta.TRAXToken.shortName)}/>
+        <AssetLine token={TokenMeta.WMATAToken} value={tokenBalances.get(TokenMeta.WMATAToken.shortName)}/>
     </div>
   );
 }
