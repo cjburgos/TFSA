@@ -34,7 +34,7 @@ function HandleCases() {
             const balanceObj = await getBalance(config, params);
             console.log(balanceObj);
             const formattedBalance = Number(balanceObj.value) / 10**balanceObj.decimals;
-            balances.set(tokenList[i]?.shortName, formattedBalance);
+            balances.set(tokenList[i]?.shortName, formattedBalance.toFixed(4));
         //   } catch (error) {
         //     balances.set(tokenList[i].shortName, 0.0);
 
@@ -62,7 +62,7 @@ function HandleCases() {
     <div className={"asset-line-container"}>
         <AssetLine token={TokenMeta.TFSA} value={tokenBalances.get(TokenMeta.TFSA?.shortName)}/>
         <AssetLine token={TokenMeta.TRAXToken} value={tokenBalances.get(TokenMeta.TRAXToken?.shortName)}/>
-        <AssetLine token={TokenMeta.WMATAToken} value={tokenBalances.get(TokenMeta.WMATAToken?.shortName)}/>
+        <AssetLine token={TokenMeta.tRBTC} value={tokenBalances.get(TokenMeta.WMATAToken?.shortName)}/>
     </div>
   );
 }

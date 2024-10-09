@@ -9,7 +9,7 @@ import { simulateContract, writeContract,waitForTransactionReceipt } from '@wagm
 import { useAccount } from 'wagmi';
 import './Modal.css';
 import abi from '../../../smartContractCode/artifacts/contracts/MetroToken.sol/MetroToken.json';
-
+import { parseGwei } from 'viem'
 
 function Modal() {
 
@@ -17,15 +17,14 @@ function Modal() {
   console.log(abi.abi)
   const request = async () => await simulateContract(config, {
     abi: abi.abi,
-    address: '0x53651aB71F1b4A74882A1EC8E9622C24Ebfb597a',
+    address: '0x01f6440Ed36B1CDb3cAdB63C089fecb52Db0C8e0',
     functionName: 'transferFrom',
     args: [
       address,
-      '0xaf755fDD0Ea69482E61755855714591BA58595DA',
-      356000000000000000000000n,
+      '0xaf755fdd0ea69482e61755855714591ba58595da',
+      "3"
     ],
   });
-  console.log(request)
   const [isVisible,setIsVisible] = useState(false);
   const navigate = useNavigate();
 
