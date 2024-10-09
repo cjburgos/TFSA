@@ -9,9 +9,9 @@ import {useLocation} from "react-router-dom";
 function ConversionRate () {
     const location = useLocation();
     const {token, amountAvailable} = location.state;
-    if (!token || !amountAvailable) {
-        return <div>Error: Missing token or amount available data.</div>;
-    }
+    // if (!token.shortName || !amountAvailable) {
+    //     return <div>Error: Missing token or amount available data.</div>;
+    // }
 
     const filteredItems = Object.values(TokenMeta).filter(item => item.shortName !== token.shortName);
 

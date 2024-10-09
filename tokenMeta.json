@@ -4,34 +4,20 @@
     "longName": "WMATA Metro Token",
     "shortName": "Metro",
     "conversionValue": 1.25,
-    "tokenContractAddr": "0x8412B9446aE027a3E734d478B10935c0a6421288"
-  },
-  "MTAToken": {
-    "img": "./src/assets/coins/MTA.svg",
-    "longName": "MTA Token",
-    "shortName": "MTA",
-    "conversionValue": 0.76,
-    "tokenContractAddr": ""
+    "tokenContractAddr": "0x01f6440Ed36B1CDb3cAdB63C089fecb52Db0C8e0"
   },
   "TRAXToken" : {
       "img": "./src/assets/coins/TRAX.svg",
       "longName": "TRAX Token",
       "shortName": "TRAX",
       "conversionValue": 0.5,
-      "tokenContractAddr": "0x53651aB71F1b4A74882A1EC8E9622C24Ebfb597a"
+      "tokenContractAddr": "0xe71f45a72c0A986Da1B6db61fe85fA2925a8CFf2"
       },
   "TFSA" : {
     "img": "./src/assets/coins/TFSA.svg",
     "longName": "Transportation Flexible Spending Account",
     "shortName": "TFSA",
     "conversionValue": 1.0,
-    "tokenContractAddr": "0x531e0D48CaC83FEDD2cb4C056188F9dAc6D41Abc"
-  },
-  "TestToken": {
-    "img": "./src/assets/coins/MTA.svg",
-    "longName": "Test Token",
-    "shortName": "TT",
-    "conversionValue": 1.0,
-    "tokenContractAddr": "0xb405c23E98eBF547DA2614547effBd12C6D8f51d"
+    "tokenContractAddr": "0x50C62C8014ECb5643a09660e8Ccd6d564661b23F"
   }
 }

@@ -10,7 +10,7 @@ import { ConnectWallet } from '../../components/web3/ConnectWallet.jsx';
 import { getBalance } from '@wagmi/core';
 
 const client = new QueryClient();
-const tokenList = [TokenMeta.TFSA, TokenMeta.TRAXToken, TokenMeta.WMATAToken]; // Add other tokens as needed
+const tokenList = [TokenMeta.TFSA, TokenMeta.TRAXToken, TokenMeta.MetroToken]; // Add other tokens as needed
 
 function HandleCases() {
   const { address, isConnected } = useAccount(); // Get the connected wallet information
@@ -32,7 +32,6 @@ function HandleCases() {
             console.log(params);
         //   try {
             const balanceObj = await getBalance(config, params);
-            console.log(balanceObj);
             const formattedBalance = Number(balanceObj.value) / 10**balanceObj.decimals;
             balances.set(tokenList[i].shortName, formattedBalance);
         //   } catch (error) {
@@ -41,7 +40,6 @@ function HandleCases() {
         //     console.error(`Error fetching balance for ${tokenList[i].shortName}:`, error);
         //   }
         }
-
         setTokenBalances(balances);
         setLoading(false);
       }
@@ -62,7 +60,7 @@ function HandleCases() {
     <div className={"asset-line-container"}>
         <AssetLine token={TokenMeta.TFSA} value={tokenBalances.get(TokenMeta.TFSA.shortName)}/>
         <AssetLine token={TokenMeta.TRAXToken} value={tokenBalances.get(TokenMeta.TRAXToken.shortName)}/>
-        <AssetLine token={TokenMeta.WMATAToken} value={tokenBalances.get(TokenMeta.WMATAToken.shortName)}/>
+        <AssetLine token={TokenMeta.MetroToken} value={tokenBalances.get(TokenMeta.MetroToken.shortName)}/>
     </div>
   );
 }
