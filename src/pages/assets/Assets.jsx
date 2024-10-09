@@ -27,14 +27,14 @@ function HandleCases() {
             console.log(address);
             const params = {
                 address: address,
-                token: tokenList[i].tokenContractAddr,
+                token: tokenList[i]?.tokenContractAddr,
               };
             console.log(params);
         //   try {
             const balanceObj = await getBalance(config, params);
             console.log(balanceObj);
             const formattedBalance = Number(balanceObj.value) / 10**balanceObj.decimals;
-            balances.set(tokenList[i].shortName, formattedBalance);
+            balances.set(tokenList[i]?.shortName, formattedBalance);
         //   } catch (error) {
         //     balances.set(tokenList[i].shortName, 0.0);
 
@@ -60,9 +60,9 @@ function HandleCases() {
 
   return (
     <div className={"asset-line-container"}>
-        <AssetLine token={TokenMeta.TFSA} value={tokenBalances.get(TokenMeta.TFSA.shortName)}/>
-        <AssetLine token={TokenMeta.TRAXToken} value={tokenBalances.get(TokenMeta.TRAXToken.shortName)}/>
-        <AssetLine token={TokenMeta.WMATAToken} value={tokenBalances.get(TokenMeta.WMATAToken.shortName)}/>
+        <AssetLine token={TokenMeta.TFSA} value={tokenBalances.get(TokenMeta.TFSA?.shortName)}/>
+        <AssetLine token={TokenMeta.TRAXToken} value={tokenBalances.get(TokenMeta.TRAXToken?.shortName)}/>
+        <AssetLine token={TokenMeta.WMATAToken} value={tokenBalances.get(TokenMeta.WMATAToken?.shortName)}/>
     </div>
   );
 }

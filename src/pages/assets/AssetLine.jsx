@@ -14,8 +14,8 @@ function AssetLine(props) {
     }
     return (
         <div className={"asset-line"} onClick={handleClick}>
-            <img src={props.token.img} className={"asset-line-item"} alt={"Token"}/>
-            <p className={"asset-line-item"}>{props.token.shortName}</p>
+            <img src={props.token?.img} className={"asset-line-item"} alt={"Token"}/>
+            <p className={"asset-line-item"}>{props.token?.shortName}</p>
             <p className={"asset-line-item"}>{props.value}</p>
         </div>
     )

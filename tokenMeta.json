@@ -11,7 +11,7 @@
     "longName": "MTA Token",
     "shortName": "MTA",
     "conversionValue": 0.76,
-    "tokenContractAddr": ""
+    "tokenContractAddr": "0x53651aB71F1b4A74882A1EC8E9622C24Ebfb597a"
   },
   "TRAXToken" : {
       "img": "./src/assets/coins/TRAX.svg",
@@ -19,7 +19,7 @@
       "shortName": "TRAX",
       "conversionValue": 0.5,
       "tokenContractAddr": "0x53651aB71F1b4A74882A1EC8E9622C24Ebfb597a"
-      },
+  },
   "TFSA" : {
     "img": "./src/assets/coins/TFSA.svg",
     "longName": "Transportation Flexible Spending Account",
