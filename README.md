@@ -34,8 +34,8 @@ We are a team from Accenture's Digital Assets practice in Washington DC! We all 
 ## Testing the Integration
 TFSA's main integration with Rootstock is in it's token contracts and MetroAggregator contract. 
 Because mint permissions are restricted, we provide an address with minting privileges for testing purposes; please load this account in MetaMask to use for testing functionality:
-- address: 0xaf755fDD0Ea69482E61755855714591BA58595DA
-- priv key: 
+- address: 0xB852c1Df87C9943676B975656dBf18E69D23CBd2
+- pwd: 3QIYawAvIuIkWHyXOWd7
 
 Options for testing functionality onchain:
 1. Mint TFSA, WMATA, or TRAX tokens using the minting functions of the respective token contracts
@@ -45,7 +45,7 @@ To test via the app, please ensure npm, React.js, and Vite are installed and set
 1. Create an account (email, password, name); a real email is required, and you will be sent a 2FA code to confirm the account.
 2. Connect a wallet (ideally one with TFSA/WMATA/TRAX preloaded)
 3. View token balances on the homepage (the default page after login and wallet connection)
-4. Click on a metro token to navigate to the Conversion page and convert between TFSA and that metro token
+4. Click on a metro token, and then select the token to swap to in order to navigate to the Conversion page 
 
 Token swapping via the frontend is not fully implemented at the moment (we ran out of time debugging wagmi async methods >.<), but the swapTokens method can be called onchain via Remix or another method (given a wallet with sufficient token balances).
 
