@@ -1,9 +1,9 @@
 {
   "auth": {
-    "user_pool_id": "us-east-1_lB8Us5BTU",
+    "user_pool_id": "us-east-1_8SbFfPcrh",
     "aws_region": "us-east-1",
-    "user_pool_client_id": "61or07kbd4cvu1hdspajmm7uft",
-    "identity_pool_id": "us-east-1:1dd5e5e3-9d35-4c0d-884e-d94621a3f8b0",
+    "user_pool_client_id": "6kfh1nng441ndtdre8soituqaj",
+    "identity_pool_id": "us-east-1:3fc65b9d-ae71-4caf-827d-254fa630f1ce",
     "mfa_methods": [],
     "standard_required_attributes": [
       "email",
@@ -27,7 +27,7 @@
     "unauthenticated_identities_enabled": true
   },
   "data": {
-    "url": "https://hwthydwnwbe3rdv3d5aq2jl3vq.appsync-api.us-east-1.amazonaws.com/graphql",
+    "url": "https://dei5ydsnlfeipcfzexi6pwxhsy.appsync-api.us-east-1.amazonaws.com/graphql",
     "aws_region": "us-east-1",
     "default_authorization_type": "AWS_IAM",
     "authorization_types": [
@@ -397,17 +397,73 @@
               "isRequired": true,
               "attributes": []
             },
-            "token": {
-              "name": "token",
+            "amount": {
+              "name": "amount",
               "isArray": false,
               "type": "String",
               "isRequired": false,
               "attributes": []
             },
-            "amount": {
-              "name": "amount",
+            "status": {
+              "name": "status",
               "isArray": false,
-              "type": "Float",
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "gas": {
+              "name": "gas",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "gasPrice": {
+              "name": "gasPrice",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "from": {
+              "name": "from",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "to": {
+              "name": "to",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "chainId": {
+              "name": "chainId",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "nonce": {
+              "name": "nonce",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "hash": {
+              "name": "hash",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "timestamp": {
+              "name": "timestamp",
+              "isArray": false,
+              "type": "String",
               "isRequired": false,
               "attributes": []
             },
