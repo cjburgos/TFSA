@@ -26,10 +26,12 @@ Some examples of successful testnet transactions:
 
 ## Team
 We are a team from Accenture's Digital Assets practice in Washington DC! We all have solid technical backgrounds and industry knowledge/familiarity, but a mix of experience levels with web3 and frontend development.  
-- Garret Berg: Data Engineer/Web3 Dev
+- Garret Berg: Data Engineer/Web3 Dev 
 - Carlo Burgos: Lead Software Architect
 - Annajune Ghrist: Data Scientist
 - Karim Hassan: Data Analyst
+
+If you have any questions, feel free to reach out to us via buidlbox or Discord!
 
 ## Testing the Integration
 TFSA's main integration with Rootstock is in it's token contracts and MetroAggregator contract. 
