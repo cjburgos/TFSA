@@ -9,13 +9,13 @@ See below for a more detailed description :)
 ## Rootstock Integration
 The TFSA DApp is built and deployed on the Rootstock ecosystem; core contracts include the Metro Aggregator smart contract and the TFSA token contract. Additional token contracts are added as each metro network issues their ERC20 token.
 
-MetroAggregator Contract - [0x8412b9446ae027a3e734d478b10935c0a6421288](https://explorer.testnet.rootstock.io/address/0x8412b9446ae027a3e734d478b10935c0a6421288)
+MetroAggregator Contract - [0xf86f526F9aA6FfcB65889ac320FdebEF227F91f3](https://explorer.testnet.rootstock.io/address/0xf86f526F9aA6FfcB65889ac320FdebEF227F91f3)
 
-TFSA Token Contract - [0x531e0d48cac83fedd2cb4c056188f9dac6d41abc](https://explorer.testnet.rootstock.io/address/0x531e0d48cac83fedd2cb4c056188f9dac6d41abc)
+TFSA Token Contract - [0x50C62C8014ECb5643a09660e8Ccd6d564661b23F](https://explorer.testnet.rootstock.io/address/0x50C62C8014ECb5643a09660e8Ccd6d564661b23F)
 
-WMATA Token Contract - [0xb77d1bb38f22bd467a18e30636f41e73d97457cc](https://explorer.testnet.rootstock.io/address/0xb77d1bb38f22bd467a18e30636f41e73d97457cc)
+WMATA Token Contract - [0x01f6440Ed36B1CDb3cAdB63C089fecb52Db0C8e0](https://explorer.testnet.rootstock.io/address/0x01f6440Ed36B1CDb3cAdB63C089fecb52Db0C8e0)
 
-TRAX Token Contract - [0x53651aB71F1b4A74882A1EC8E9622C24Ebfb597a](https://explorer.testnet.rootstock.io/address/0x53651aB71F1b4A74882A1EC8E9622C24Ebfb597a)
+TRAX Token Contract - [0xe71f45a72c0A986Da1B6db61fe85fA2925a8CFf2](https://explorer.testnet.rootstock.io/address/0xe71f45a72c0A986Da1B6db61fe85fA2925a8CFf2)
 
 MetroAggregator Treasury Address - [0xe755336a328066d67a50d1bc08cb3dff864f4bac](https://explorer.testnet.rootstock.io/address/0xe755336a328066d67a50d1bc08cb3dff864f4bac)
 
@@ -32,8 +32,9 @@ We are a team from Accenture's Digital Assets practice in Washington DC! We all 
 
 ## Testing the Integration
 TFSA's main integration with Rootstock is in it's token contracts and MetroAggregator contract. 
-Because mint permissions are restricted, we provide an address with minting privileges for testing purposes; please load this address to use for testing functionality:
-- // addr info
+Because mint permissions are restricted, we provide an address with minting privileges for testing purposes; please load this account in MetaMask to use for testing functionality:
+- address: 0xaf755fDD0Ea69482E61755855714591BA58595DA
+- priv key: 
 
 Options for testing functionality onchain:
 1. Mint TFSA, WMATA, or TRAX tokens using the minting functions of the respective token contracts
@@ -43,6 +44,9 @@ To test via the app, please ensure npm, React.js, and Vite are installed and set
 1. Create an account (email, password, name); a real email is required, and you will be sent a 2FA code to confirm the account.
 2. Connect a wallet (ideally one with TFSA/WMATA/TRAX preloaded)
 3. View token balances on the homepage (the default page after login and wallet connection)
+4. Click on a metro token to navigate to the Conversion page and convert between TFSA and that metro token
+
+Token swapping via the frontend is not fully implemented at the moment (we ran out of time debugging wagmi async methods >.<), but the swapTokens method can be called onchain via Remix or another method (given a wallet with sufficient token balances).
 
 ## Experience Developing with Rootstock
 
