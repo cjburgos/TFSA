@@ -11,5 +11,5 @@
 4) clear instructions for testing the integration.
 
 5) feedback describing your experience with building on Rootstock.
-
+ 
 6) optionally, a short video demo or slide deck.

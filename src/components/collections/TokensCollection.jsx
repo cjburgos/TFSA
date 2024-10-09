@@ -1,4 +1,4 @@
-import { Heading, Button, Collection, Card, Image, View, Divider } from '@aws-amplify/ui-react';
+import { Heading, Collection, Card, Image, View, Divider } from '@aws-amplify/ui-react';
 import tokens from '../../../tokenMeta.json';
 
 function TokensCollection () {
