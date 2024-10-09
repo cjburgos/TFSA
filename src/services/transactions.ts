@@ -4,6 +4,10 @@ import { type Schema } from '../../amplify/data/resource';
 const client = generateClient<Schema>();
 
 export async function createTransaction(tx: {}) {
-  const response = await client.models.tokenTransaction.create(tx);
-  console.log(response)
+  return await client.models.tokenTransaction.create(tx);
 }
+
+export async function listTransactions(tx: {}) {
+    return await client.models.tokenTransaction.list(tx);
+}
+  

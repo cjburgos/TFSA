@@ -36,18 +36,21 @@ function Modal() {
       account: '0x70997970c51812dc3a010c7d01b50e0d17dc79c8',
       value: parseEther('1'),
     })
-    console.log(transaction)
+
     let response = await createTransaction({
-      amount: transaction.value,
+      amount: transaction.value.toString(),
       status: 'pending',
-      gas: transaction.gas,
-      gasPrice: transaction.gasPrice,
+      gas: transaction.gas.toString(),
+      gasPrice: transaction.gasPrice.toString(),
       from: transaction.from,
       to: transaction.to,
       chainId: transaction.chainId,
       nonce: transaction.nonce,
       hash: '',
       timestamp: 0
+    },  
+    {
+      authMode: 'userPool',
     })
     console.log(response)
   } 

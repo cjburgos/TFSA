@@ -1,5 +1,4 @@
 import { type ClientSchema, a, defineData } from '@aws-amplify/backend';
-import { fromBlobs } from 'viem';
 
 /*== STEP 1 ===============================================================
 The section below creates a Todo database table with a "content" field. Try
@@ -17,7 +16,9 @@ const schema = a.schema({
     password: a.string(),
     role: a.enum(["Admin", "User"]),
     status: a.enum(["Active", "Inactive"]),
-  }).authorization((allow) => [allow.owner()]),
+  }).authorization(allow => [
+    allow.owner()
+  ]),
   Location: a
   .model({
     id: a.id(),
@@ -28,7 +29,9 @@ const schema = a.schema({
     zip: a.string(),
     status: a.enum(["Active", "Inactive"]),
     fareId: a.belongsTo('Fare','id'),
-  }),
+  }).authorization(allow => [
+    allow.guest()
+  ]),
   Fare: a
   .model({
     id: a.id(),
@@ -38,7 +41,9 @@ const schema = a.schema({
     price: a.float(),
     user: a.string(),
     status: a.enum(["Pending", "Accepted", "Completed", "Cancelled"]),
-  }),
+  }).authorization(allow => [
+    allow.guest()
+  ]),
   tokenTransaction: a
   .model({
     amount: a.string(),
@@ -51,15 +56,17 @@ const schema = a.schema({
     nonce: a.string(),
     hash: a.string(),
     timestamp: a.string()
-  })
-}).authorization((allow) => [allow.guest()]);
+  }).authorization(allow => [
+    allow.authenticated()
+  ])
+});
 
 export type Schema = ClientSchema<typeof schema>;
 
 export const data = defineData({
   schema,
   authorizationModes: {
-    defaultAuthorizationMode: 'iam',
+    defaultAuthorizationMode: 'userPool',
   },
 });
 
