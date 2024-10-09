@@ -1,25 +1,19 @@
-import CheckMark from "../../assets/common/check.svg";
+// src/pages/rideStart.jsx
+import React, { useState, useEffect } from 'react';
+import MetroToken from "../../assets/coins/Metro.svg";
 import "./rideComplete.css";
+import Modal from '../../components/modal/CompleteRideModal';
 
-function RideComplete () {
+function RideComplete() {
+
+  
     return (
         <div className="box">
-            <div className="overlap">
-                <img src={CheckMark} alt="checkmark" className="checkmark"/>
-                <div className="coin-group">
-                    <div className="coin-slot">
-                        <div className="slot">
+            <Modal>
 
-                            <div className="rectangle"/>
-                            <div className="rectangle-2"/>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
+            </Modal>
         </div>
     );
 };
 
-export {RideComplete}
+export { RideComplete };

@@ -27,13 +27,13 @@ function HandleCases() {
             console.log(address);
             const params = {
                 address: address,
-                token: tokenList[i].tokenContractAddr,
+                token: tokenList[i]?.tokenContractAddr,
               };
             console.log(params);
         //   try {
             const balanceObj = await getBalance(config, params);
             const formattedBalance = Number(balanceObj.value) / 10**balanceObj.decimals;
-            balances.set(tokenList[i].shortName, formattedBalance);
+            balances.set(tokenList[i]?.shortName, formattedBalance.toFixed(4));
         //   } catch (error) {
         //     balances.set(tokenList[i].shortName, 0.0);
 
