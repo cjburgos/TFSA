@@ -6,26 +6,26 @@ import { parseEther } from 'viem';
 import { config } from '../../wagmi';
 import { listTransactions } from '../../services/transactions';
 import { simulateContract, writeContract,waitForTransactionReceipt } from '@wagmi/core';
-import { getAccount,useAccount } from '@wagmi/core';
-
+import { useAccount } from 'wagmi';
 import './Modal.css';
+import abi from '../../../smartContractCode/artifacts/contracts/MetroToken.sol/MetroToken.json';
 
-import abi from '../../../smartContractCode/abi.json';
 
 function Modal() {
 
-  const { address, isConnected } = useAccount(); // Get the connected wallet information
-  const { request } = async () => await simulateContract(config, {
-    abi,
-    address: '0x8412B9446aE027a3E734d478B10935c0a6421288',
+  const { address } = useAccount({config}); // Get the connected wallet information
+  console.log(abi.abi)
+  const request = async () => await simulateContract(config, {
+    abi: abi.abi,
+    address: '0x53651aB71F1b4A74882A1EC8E9622C24Ebfb597a',
     functionName: 'transferFrom',
     args: [
       address,
-      '0xe755336a328066D67A50D1bc08Cb3DFF864f4baC',
-      123n,
+      '0xaf755fDD0Ea69482E61755855714591BA58595DA',
+      356000000000000000000000n,
     ],
-  })
-
+  });
+  console.log(request)
   const [isVisible,setIsVisible] = useState(false);
   const navigate = useNavigate();
 
@@ -45,15 +45,15 @@ function Modal() {
   const getTimestamp = new Date().toLocaleString();
 
   const submitTxn = async () =>{
-    let hash = await writeContract(config, request);
+    const requestData = await request();
+    console.log(requestData);
+    let hash = await writeContract(config, requestData);
     const transactionReceipt = waitForTransactionReceipt(config, {
       hash: hash,
     })
     console.log(transactionReceipt)
     navigate('/');
   } 
-
-  
 
   const [transactions, setTransactions] = useState([]);
 
@@ -65,7 +65,9 @@ function Modal() {
 
       fetchTransactions();
   }, []);
+
   const [selectedValue, setSelectedValue] = useState('');
+
   const handleChange = (event) => {
     setSelectedValue(event.target.value);
   };
@@ -75,8 +77,8 @@ function Modal() {
         <h1> Complete Ride </h1>
         <p> <strong> Current Balance: </strong> 54.33 </p>
         <p> <strong> Amount Due: </strong> 3.56 </p>
-        <p> <strong>Ride Started On:</strong> {transactions.filter(txn => txn.id === selectedValue).map(txn => txn.timestamp)}</p>  
-        <p> <strong>Timestamp:</strong> {getTimestamp}</p>  
+        <p> <strong>Started:</strong> {transactions.filter(txn => txn.id === selectedValue).map(txn => txn.timestamp)}</p>  
+        <p> <strong>Completed:</strong> {getTimestamp}</p>  
 
         <div className="modalSelectAssetSection">
           {/* <p> <strong> Origin: </strong> </p> */}
@@ -88,11 +90,10 @@ function Modal() {
               ))}
             </SelectField>
         </div>
-        
-        <div className="modalFooter">
-          <button onClick={submitTxn}> Confirm </button>
-          <button onClick={closeModal}> Cancel </button>
-        </div>
+            <div className="modalFooter">
+              <button onClick={submitTxn}> Confirm </button>
+              <button onClick={closeModal}> Cancel </button>
+            </div>
     </div>
   );
 }
