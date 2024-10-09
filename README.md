@@ -20,8 +20,9 @@ TRAX Token Contract - [0xe71f45a72c0A986Da1B6db61fe85fA2925a8CFf2](https://explo
 MetroAggregator Treasury Address - [0xe755336a328066d67a50d1bc08cb3dff864f4bac](https://explorer.testnet.rootstock.io/address/0xe755336a328066d67a50d1bc08cb3dff864f4bac)
 
 Some examples of successful testnet transactions:
-- [txn hash 1](https://explorer.testnet.rootstock.io/...)
-- [txn hash 2](https://explorer.testnet.rootstock.io/...)
+- [txn hash 1](https://explorer.testnet.rootstock.io/tx/0x1a240a949f10f66f4ee7b20357b458dc6a70b578734170616b77539d61fcac2f)
+- [txn hash 2](https://explorer.testnet.rootstock.io/tx/0x89d1e457cb72dc1151f1f580e9fb28ca39b3ab725246df40bf5dd33d0992a86e)
+- Most Transaction were submitted from the Address [0xaf755fDD0Ea69482E61755855714591BA58595DA](https://explorer.testnet.rootstock.io/address/0xaf755fdd0ea69482e61755855714591ba58595da)
 
 ## Team
 We are a team from Accenture's Digital Assets practice in Washington DC! We all have solid technical backgrounds and industry knowledge/familiarity, but a mix of experience levels with web3 and frontend development.  
