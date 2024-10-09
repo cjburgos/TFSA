@@ -1,32 +1,49 @@
-
+import React, { useState, useEffect } from 'react';
+import {
+    Table,
+    TableCell,
+    TableBody,
+    TableHead,
+    TableRow,
+  } from '@aws-amplify/ui-react';
 import MetroToken from "../../assets/coins/Metro.svg";
 import "./rideInProgress.css";
+import { listTransactions } from "../../services/transactions";
 
 function RideInProgress() {
+    const [tableBodyRows, setTableBodyRows] = useState([]);
+
+    useEffect(() => {
+        const fetchTransactions = async () => {
+            let txns = await listTransactions();
+            setTableBodyRows(txns.data?.map((txn) => {
+                return (
+                    <TableRow key={txn.id}>
+                        <TableCell>{txn.amount}</TableCell>
+                        <TableCell>{txn.from}</TableCell>
+                        <TableCell>{txn.to}</TableCell>
+                        <TableCell>{txn.timestamp}</TableCell>
+                    </TableRow>
+                );
+            }));
+        };
+
+        fetchTransactions();
+    }, []);
     return (
-        <div className="box">
-                <div className="overlap">
-                    <div className="rectangle-7" />
-                    <div className="route-progress">
-
-                            <div className="rectangle-8" />
-                            <div className="token" />
-                            <div className="token-2" />
-                            <div className="token-3" />
-                            <div className="token-4" />
-                            <div className="token-5" />
-                            <div className="token-6" />
-                            <div className="token-7" />
-                            <div className="token-8" />
-
-                    </div>
-                    <div className="metro-coin">
-
-                            <img className="image" alt="Image" src={MetroToken} />
-                        </div>
-                    </div>
-
-        </div>
+        <Table>
+            <TableHead>
+                <TableRow>
+                    <TableCell>Amount</TableCell>
+                    <TableCell>From</TableCell>
+                    <TableCell>To</TableCell>
+                    <TableCell>Timestamp</TableCell>
+                </TableRow>
+            </TableHead>
+            <TableBody>
+                {tableBodyRows}
+            </TableBody>
+        </Table>
     );
 };
 

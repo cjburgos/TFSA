@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Flex, Text, Divider } from '@aws-amplify/ui-react';
+import { Flex, SelectField, Divider } from '@aws-amplify/ui-react';
 import { prepareTransactionRequest } from '@wagmi/core';
 import { useNavigate } from 'react-router-dom';
 import { parseEther } from 'viem';
 import { config } from '../../wagmi';
 import TokensCollection from '../collections/TokensCollection';
-
+import {listLocations} from '../../services/locations';
 import { createTransaction } from '../../services/transactions';
 
 import './Modal.css';
@@ -47,27 +47,50 @@ function Modal() {
       chainId: transaction.chainId,
       nonce: transaction.nonce,
       hash: '',
-      timestamp: 0
+      timestamp: getTimestamp
     },  
     {
       authMode: 'userPool',
     })
     console.log(response)
+    navigate('/');
   } 
+
+  const [locations, setLocations] = useState([]);
+
+  useEffect(() => {
+    const fetchLocations = async () => {
+      let locations = await listLocations({
+          authMode: 'userPool',
+      });
+      console.log(locations);
+      setLocations(['Foggy-Bottom', 'Dupont-Circle', 'Georgetown']);
+    };
+    fetchLocations();
+  }, []);
 
   return (
     <div className={`modal ${isVisible ? 'modal-visible' : ''}`}>
         <h1> Starting New Ride </h1>
         <p> <strong> Current Balance: </strong> 54.33 </p>
         <p> <strong>Timestamp:</strong> {getTimestamp}</p>  
-        <Divider orientation="horizontal" />
-        <div className="modalSelectAsset">
-          <p> <strong> Origin: </strong> {}</p>
+
+        <div className="modalSelectAssetSection">
+          {/* <p> <strong> Origin: </strong> </p> */}
+          <SelectField className="modalSelectAsset" label="Select Origin">
+              {locations.map((location, index) => (
+                <option key={index} value={location}>
+                  {location}
+                </option>
+              ))}
+            </SelectField>
         </div>
 
         <div className="modalBody">
-          <p> Select Token </p>
-          <TokensCollection/>
+          <SelectField className="modalSelectAsset" label="Select Token">
+              <option value="Metro">Metro Token (Metro)</option>
+              <option value="TFSA">TFSA (TFSA)</option>
+            </SelectField>
         </div>
         
         <div className="modalFooter">

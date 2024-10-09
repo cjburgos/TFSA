@@ -21,14 +21,14 @@ const schema = a.schema({
   ]),
   Location: a
   .model({
-    id: a.id(),
     name: a.string(),
     address: a.string(),
     city: a.string(),
     state: a.string(),
     zip: a.string(),
     status: a.enum(["Active", "Inactive"]),
-    fareId: a.belongsTo('Fare','id'),
+    destinationFareId: a.hasMany('Fare', 'destinationId'),
+    originFareId: a.hasMany('Fare', 'originId'),
   }).authorization(allow => [
     allow.guest()
   ]),
@@ -36,8 +36,10 @@ const schema = a.schema({
   .model({
     id: a.id(),
     timestamp: a.datetime(),
-    origin: a.string(),
-    destination: a.hasOne('Location', 'id'),
+    originId: a.id(),
+    origin: a.belongsTo('Location',  'originId'),
+    destinationId: a.id(),
+    destination: a.belongsTo('Location', 'destinationId'),
     price: a.float(),
     user: a.string(),
     status: a.enum(["Pending", "Accepted", "Completed", "Cancelled"]),

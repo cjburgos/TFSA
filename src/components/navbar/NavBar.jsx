@@ -42,6 +42,8 @@ export const NavBar = () => {
             <MenuItem onClick={() => handleButtonClick('/')}> Home </MenuItem>
             <MenuItem onClick={() => handleButtonClick('/conversion_rates')}> Convert </MenuItem>
             <MenuItem onClick={() => handleButtonClick('/ride_start')}> Start Ride </MenuItem>
+            <MenuItem onClick={() => handleButtonClick('/ride_in_progress')}> In-Progress Rides </MenuItem>
+
             <MenuItem onClick={() => handleSignOut()}>  Sign Out </MenuItem>
         </Menu>
         </ThemeProvider>

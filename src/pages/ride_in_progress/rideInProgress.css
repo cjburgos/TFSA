@@ -266,3 +266,8 @@
     top: 41px;
     width: 106px;
 }
+
+.amplify-table__td {
+    color: white;
+    font-size: 0.8rem;
+}

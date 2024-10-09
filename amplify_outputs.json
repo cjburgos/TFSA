@@ -197,18 +197,35 @@
               "isRequired": false,
               "attributes": []
             },
-            "fareId": {
-              "name": "fareId",
-              "isArray": false,
+            "destinationFareId": {
+              "name": "destinationFareId",
+              "isArray": true,
               "type": {
                 "model": "Fare"
               },
               "isRequired": false,
               "attributes": [],
+              "isArrayNullable": true,
               "association": {
-                "connectionType": "BELONGS_TO",
-                "targetNames": [
-                  "id"
+                "connectionType": "HAS_MANY",
+                "associatedWith": [
+                  "destinationId"
+                ]
+              }
+            },
+            "originFareId": {
+              "name": "originFareId",
+              "isArray": true,
+              "type": {
+                "model": "Fare"
+              },
+              "isRequired": false,
+              "attributes": [],
+              "isArrayNullable": true,
+              "association": {
+                "connectionType": "HAS_MANY",
+                "associatedWith": [
+                  "originId"
                 ]
               }
             },
@@ -235,14 +252,6 @@
             {
               "type": "model",
               "properties": {}
-            },
-            {
-              "type": "key",
-              "properties": {
-                "fields": [
-                  "id"
-                ]
-              }
             },
             {
               "type": "auth",
@@ -285,10 +294,32 @@
               "isRequired": false,
               "attributes": []
             },
+            "originId": {
+              "name": "originId",
+              "isArray": false,
+              "type": "ID",
+              "isRequired": false,
+              "attributes": []
+            },
             "origin": {
               "name": "origin",
               "isArray": false,
-              "type": "String",
+              "type": {
+                "model": "Location"
+              },
+              "isRequired": false,
+              "attributes": [],
+              "association": {
+                "connectionType": "BELONGS_TO",
+                "targetNames": [
+                  "originId"
+                ]
+              }
+            },
+            "destinationId": {
+              "name": "destinationId",
+              "isArray": false,
+              "type": "ID",
               "isRequired": false,
               "attributes": []
             },
@@ -301,11 +332,10 @@
               "isRequired": false,
               "attributes": [],
               "association": {
-                "connectionType": "HAS_ONE",
-                "associatedWith": [
-                  "id"
-                ],
-                "targetNames": []
+                "connectionType": "BELONGS_TO",
+                "targetNames": [
+                  "destinationId"
+                ]
               }
             },
             "price": {
