@@ -71,7 +71,7 @@ function Modal() {
         </div>
         
         <div className="modalFooter">
-          <button onClick={prepareTxn()}> Confirm </button>
+          <button onClick={prepareTxn}> Confirm </button>
           <button onClick={closeModal}> Cancel </button>
         </div>
     </div>
