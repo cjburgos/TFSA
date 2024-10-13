@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { AssetLine } from './AssetLine.jsx';
+import { AssetLine } from './AssetLine.tsx';
 import './assets.css';
 import TokenMeta from '../../../tokenMeta.json';
 import { useAccount } from 'wagmi';
@@ -30,15 +30,9 @@ function HandleCases() {
                 token: tokenList[i]?.tokenContractAddr,
               };
             console.log(params);
-        //   try {
             const balanceObj = await getBalance(config, params);
             const formattedBalance = Number(balanceObj.value) / 10**balanceObj.decimals;
             balances.set(tokenList[i]?.shortName, formattedBalance.toFixed(4));
-        //   } catch (error) {
-        //     balances.set(tokenList[i].shortName, 0.0);
-
-        //     console.error(`Error fetching balance for ${tokenList[i].shortName}:`, error);
-        //   }
         }
         setTokenBalances(balances);
         setLoading(false);
@@ -48,9 +42,9 @@ function HandleCases() {
     fetchBalances();
   }, [address, isConnected]); // Fetch balances when the account or connection status changes
 
-  if (!isConnected) {
-    return <ConnectWallet />;
-  }
+  // if (!isConnected) {
+  //   return <ConnectWallet />;
+  // }
 
   if (loading) {
     return <p>Loading balances...</p>; // Show a loading state while fetching

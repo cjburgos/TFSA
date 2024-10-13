@@ -11,21 +11,19 @@ import { createTransaction } from '../../services/transactions';
 import './Modal.css';
 
 
-function Modal() {
-  const [isVisible,setIsVisible] = useState(false);
-  const navigate = useNavigate();
+function StartRideModal({visible, closeModal}) {
+  const [isVisible,setIsVisible] = useState(visible);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 2000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
   
-  const closeModal = () => {
-      setIsVisible(false);
-      navigate('/');
+  const emitCloseModal = () => {
+    closeModal()
   }
 
   const getTimestamp = new Date().toLocaleString();
@@ -53,7 +51,6 @@ function Modal() {
       authMode: 'userPool',
     })
     console.log(response)
-    navigate('/');
   } 
 
   const [locations, setLocations] = useState([]);
@@ -94,11 +91,11 @@ function Modal() {
         </div>
         
         <div className="modalFooter">
-          <button onClick={prepareTxn}> Confirm </button>
-          <button onClick={closeModal}> Cancel </button>
+          <button className="action-button" onClick={prepareTxn}> Confirm </button>
+          <button className="action-button" onClick={emitCloseModal}> Cancel </button>
         </div>
     </div>
   );
 }
 
-export default Modal;
+export default StartRideModal;

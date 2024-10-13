@@ -13,7 +13,7 @@ export const ConnectWallet = () => {
         <QueryClientProvider client={client}>
             <RainbowKitProvider>
                 {/* app body goes here */}
-                <ConnectButton label="Connect Wallet" showBalance={true} />
+                <ConnectButton className="connect-button" label="Connect Wallet" showBalance={true} />
             </RainbowKitProvider>
         </QueryClientProvider>
     </WagmiProvider>

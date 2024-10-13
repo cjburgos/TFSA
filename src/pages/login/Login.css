@@ -1,0 +1,26 @@
+[data-amplify-authenticator] {
+    height:100%;
+}
+
+[data-amplify-container] {
+    background-color: black;
+}
+
+.amplify-button--primary{
+    background-color: #1a1a1a;
+}
+
+.amplify-tabs__item--active {
+    color: white;
+}
+.amplify-tabs__item--inactive {
+    color: white;
+
+}
+.amplify-tabs__item:hover { 
+    color: #646cff;
+ }
+
+ .amplify-button--link {
+    color: #646cff;
+ }

@@ -1,0 +1,7 @@
+main.main-layout {
+  display: flex;
+
+  justify-content: space-between;
+  padding:auto;
+  margin: auto;
+}

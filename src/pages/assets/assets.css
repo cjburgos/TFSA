@@ -1,17 +1,26 @@
 .asset-line{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
     border-bottom: 1px solid #e0e0e0;
+    padding:10px;
+    padding-right:15px;
+    padding-left:15px;
 }
 
-.asset-line-item {
-    display: flex;
-    align-items: center;
-    padding: 3em;
+p.amplify-text {
+    color: white;
 }
 
 .asset-line-container {
+    display:block;
     border-top: 1px solid #e0e0e0;
+    margin-top:50px;
+    width: 25%;
+}
+
+img.amplify-image {
+    width: 70px;
+    height: 70px;
 }
